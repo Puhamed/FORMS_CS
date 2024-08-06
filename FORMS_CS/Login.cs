@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace FORMS_CS
 {
-    public partial class Store : Form
+    public partial class Login : Form
     {
-        public Store()
+        public Login()
         {
             InitializeComponent();
-        }
-
-        private void Button4_Click(object sender, EventArgs e)
-        {
-            newBill nb = new newBill();
-            nb.ShowDialog(); 
         }
     }
 }

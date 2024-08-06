@@ -55,7 +55,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.totalLabel = new System.Windows.Forms.Label();
             this.dvg = new System.Windows.Forms.DataGridView();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +69,6 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +124,7 @@
             this.Button1.TabIndex = 0;
             this.Button1.Text = "X";
             this.Button1.UseVisualStyleBackColor = false;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel2
             // 
@@ -207,11 +206,11 @@
             // priceBox
             // 
             this.priceBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.priceBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.priceBox.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
             this.priceBox.Location = new System.Drawing.Point(233, 30);
             this.priceBox.Margin = new System.Windows.Forms.Padding(5);
             this.priceBox.Name = "priceBox";
-            this.priceBox.Size = new System.Drawing.Size(84, 26);
+            this.priceBox.Size = new System.Drawing.Size(84, 23);
             this.priceBox.TabIndex = 21;
             // 
             // label7
@@ -219,7 +218,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(325, 28);
+            this.label7.Location = new System.Drawing.Point(323, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 22);
             this.label7.TabIndex = 20;
@@ -239,6 +238,7 @@
             // quantbox
             // 
             this.quantbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.quantbox.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
             this.quantbox.Location = new System.Drawing.Point(416, 32);
             this.quantbox.Name = "quantbox";
             this.quantbox.Size = new System.Drawing.Size(81, 23);
@@ -247,11 +247,11 @@
             // senfBox
             // 
             this.senfBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.senfBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.senfBox.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
             this.senfBox.Location = new System.Drawing.Point(584, 32);
             this.senfBox.Margin = new System.Windows.Forms.Padding(5);
             this.senfBox.Name = "senfBox";
-            this.senfBox.Size = new System.Drawing.Size(172, 26);
+            this.senfBox.Size = new System.Drawing.Size(172, 23);
             this.senfBox.TabIndex = 17;
             // 
             // label4
@@ -268,11 +268,11 @@
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(490, 18);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(266, 27);
+            this.comboBox1.Size = new System.Drawing.Size(266, 30);
             this.comboBox1.TabIndex = 9;
             // 
             // label3
@@ -318,11 +318,11 @@
             // TextBox1
             // 
             this.TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.TextBox1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
             this.TextBox1.Location = new System.Drawing.Point(681, 9);
             this.TextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(82, 26);
+            this.TextBox1.Size = new System.Drawing.Size(82, 23);
             this.TextBox1.TabIndex = 15;
             // 
             // label1
@@ -353,41 +353,30 @@
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 223);
+            this.panel5.Location = new System.Drawing.Point(0, 216);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(848, 30);
+            this.panel5.Size = new System.Drawing.Size(848, 37);
             this.panel5.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label5.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(162, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 15);
+            this.label5.Size = new System.Drawing.Size(65, 22);
             this.label5.TabIndex = 18;
             this.label5.Text = "الاجمالي";
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.totalLabel);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(162, 30);
+            this.panel6.Size = new System.Drawing.Size(162, 37);
             this.panel6.TabIndex = 0;
-            // 
-            // totalLabel
-            // 
-            this.totalLabel.AutoSize = true;
-            this.totalLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.totalLabel.Location = new System.Drawing.Point(14, 0);
-            this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(148, 15);
-            this.totalLabel.TabIndex = 19;
-            this.totalLabel.Text = "...............................................";
             // 
             // dvg
             // 
@@ -480,8 +469,6 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvg)).EndInit();
             this.ResumeLayout(false);
 
@@ -507,7 +494,6 @@
         private System.Windows.Forms.Panel panel5;
         internal System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        internal System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn senf;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
