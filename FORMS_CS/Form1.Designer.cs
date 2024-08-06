@@ -72,10 +72,10 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Label2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.Label2.Location = new System.Drawing.Point(1120, 0);
+            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label2.Location = new System.Drawing.Point(1151, 0);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(130, 22);
+            this.Label2.Size = new System.Drawing.Size(99, 16);
             this.Label2.TabIndex = 7;
             this.Label2.Text = "منظومة المبيعات";
             // 
@@ -143,20 +143,20 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label1.ForeColor = System.Drawing.Color.White;
             this.Label1.Location = new System.Drawing.Point(230, 4);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(108, 22);
+            this.Label1.Size = new System.Drawing.Size(27, 16);
             this.Label1.TabIndex = 6;
-            this.Label1.Text = "اسم المستخدم";
+            this.Label1.Text = "اسم";
             // 
             // TextBox1
             // 
-            this.TextBox1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.TextBox1.Location = new System.Drawing.Point(12, 3);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(212, 23);
+            this.TextBox1.Size = new System.Drawing.Size(212, 22);
             this.TextBox1.TabIndex = 5;
             // 
             // Button8
@@ -164,7 +164,7 @@
             this.Button8.BackColor = System.Drawing.Color.White;
             this.Button8.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button8.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button8.Image = global::FORMS_CS.Properties.Resources.salesscreen;
             this.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button8.Location = new System.Drawing.Point(550, 0);
@@ -181,7 +181,7 @@
             this.Button7.BackColor = System.Drawing.Color.White;
             this.Button7.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button7.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button7.Image = global::FORMS_CS.Properties.Resources.settings;
             this.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button7.Location = new System.Drawing.Point(690, 0);
@@ -198,7 +198,7 @@
             this.Button6.BackColor = System.Drawing.Color.White;
             this.Button6.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button6.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button6.Image = global::FORMS_CS.Properties.Resources.storage;
             this.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button6.Location = new System.Drawing.Point(830, 0);
@@ -214,7 +214,7 @@
             this.Button5.BackColor = System.Drawing.Color.White;
             this.Button5.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button5.Image = global::FORMS_CS.Properties.Resources.sales;
             this.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button5.Location = new System.Drawing.Point(970, 0);
@@ -230,7 +230,7 @@
             this.Button4.BackColor = System.Drawing.Color.White;
             this.Button4.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button4.Image = global::FORMS_CS.Properties.Resources.MAIN;
             this.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button4.Location = new System.Drawing.Point(1110, 0);
