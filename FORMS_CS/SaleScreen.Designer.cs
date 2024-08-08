@@ -120,7 +120,7 @@
             // 
             this.Button12.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button12.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button12.ForeColor = System.Drawing.Color.White;
             this.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button12.Location = new System.Drawing.Point(410, 0);
@@ -136,7 +136,7 @@
             // 
             this.Button8.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button8.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button8.ForeColor = System.Drawing.Color.White;
             this.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button8.Location = new System.Drawing.Point(533, 0);
@@ -152,7 +152,7 @@
             // 
             this.Button7.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button7.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button7.ForeColor = System.Drawing.Color.White;
             this.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button7.Location = new System.Drawing.Point(656, 0);
@@ -167,10 +167,10 @@
             // chose2
             // 
             this.chose2.AutoSize = true;
-            this.chose2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.chose2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.chose2.Location = new System.Drawing.Point(26, 59);
             this.chose2.Name = "chose2";
-            this.chose2.Size = new System.Drawing.Size(43, 22);
+            this.chose2.Size = new System.Drawing.Size(43, 16);
             this.chose2.TabIndex = 12;
             this.chose2.TabStop = true;
             this.chose2.Text = "اختيار";
@@ -348,7 +348,7 @@
             this.Panel4.Controls.Add(this.Button3);
             this.Panel4.Controls.Add(this.Button4);
             this.Panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Panel4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Panel4.Location = new System.Drawing.Point(165, 0);
             this.Panel4.Margin = new System.Windows.Forms.Padding(5);
             this.Panel4.Name = "Panel4";
@@ -359,7 +359,7 @@
             // 
             this.Button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button1.ForeColor = System.Drawing.Color.White;
             this.Button1.Location = new System.Drawing.Point(0, 240);
             this.Button1.Margin = new System.Windows.Forms.Padding(5);
@@ -373,7 +373,7 @@
             // 
             this.Button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button6.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button6.ForeColor = System.Drawing.Color.White;
             this.Button6.Location = new System.Drawing.Point(0, 192);
             this.Button6.Margin = new System.Windows.Forms.Padding(5);
@@ -387,7 +387,7 @@
             // 
             this.Button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button2.ForeColor = System.Drawing.Color.White;
             this.Button2.Location = new System.Drawing.Point(0, 144);
             this.Button2.Margin = new System.Windows.Forms.Padding(5);
@@ -401,7 +401,7 @@
             // 
             this.Button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button5.ForeColor = System.Drawing.Color.White;
             this.Button5.Location = new System.Drawing.Point(0, 96);
             this.Button5.Margin = new System.Windows.Forms.Padding(5);
@@ -415,7 +415,7 @@
             // 
             this.Button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button3.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button3.ForeColor = System.Drawing.Color.White;
             this.Button3.Location = new System.Drawing.Point(0, 48);
             this.Button3.Margin = new System.Windows.Forms.Padding(5);
@@ -429,7 +429,7 @@
             // 
             this.Button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button4.ForeColor = System.Drawing.Color.White;
             this.Button4.Location = new System.Drawing.Point(0, 0);
             this.Button4.Margin = new System.Windows.Forms.Padding(5);
@@ -442,10 +442,10 @@
             // chose1
             // 
             this.chose1.AutoSize = true;
-            this.chose1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.chose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.chose1.Location = new System.Drawing.Point(26, 13);
             this.chose1.Name = "chose1";
-            this.chose1.Size = new System.Drawing.Size(43, 22);
+            this.chose1.Size = new System.Drawing.Size(43, 16);
             this.chose1.TabIndex = 11;
             this.chose1.TabStop = true;
             this.chose1.Text = "اختيار";
@@ -453,10 +453,10 @@
             // last1
             // 
             this.last1.AutoSize = true;
-            this.last1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.last1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.last1.Location = new System.Drawing.Point(21, 104);
             this.last1.Name = "last1";
-            this.last1.Size = new System.Drawing.Size(55, 22);
+            this.last1.Size = new System.Drawing.Size(45, 16);
             this.last1.TabIndex = 8;
             this.last1.TabStop = true;
             this.last1.Text = "السابق";
@@ -500,6 +500,7 @@
             this.dvg.RowHeadersVisible = false;
             this.dvg.Size = new System.Drawing.Size(779, 214);
             this.dvg.TabIndex = 2;
+            this.dvg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_CellContentClick);
             // 
             // No
             // 
@@ -587,10 +588,10 @@
             // 
             this.Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label4.Location = new System.Drawing.Point(354, 20);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(80, 22);
+            this.Label4.Size = new System.Drawing.Size(66, 16);
             this.Label4.TabIndex = 16;
             this.Label4.Text = "اسم الزبون";
             // 
@@ -598,10 +599,10 @@
             // 
             this.Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label3.Location = new System.Drawing.Point(352, 83);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(53, 22);
+            this.Label3.Size = new System.Drawing.Size(42, 16);
             this.Label3.TabIndex = 17;
             this.Label3.Text = "الكمية";
             // 
@@ -663,10 +664,10 @@
             // 
             this.prize2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.prize2.AutoSize = true;
-            this.prize2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.prize2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.prize2.Location = new System.Drawing.Point(144, 37);
             this.prize2.Name = "prize2";
-            this.prize2.Size = new System.Drawing.Size(30, 22);
+            this.prize2.Size = new System.Drawing.Size(31, 16);
             this.prize2.TabIndex = 7;
             this.prize2.Text = "****";
             // 
@@ -674,10 +675,10 @@
             // 
             this.prize1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.prize1.AutoSize = true;
-            this.prize1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.prize1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.prize1.Location = new System.Drawing.Point(144, 8);
             this.prize1.Name = "prize1";
-            this.prize1.Size = new System.Drawing.Size(30, 22);
+            this.prize1.Size = new System.Drawing.Size(31, 16);
             this.prize1.TabIndex = 5;
             this.prize1.Text = "****";
             // 
@@ -685,10 +686,10 @@
             // 
             this.totall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.totall.AutoSize = true;
-            this.totall.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.totall.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.totall.Location = new System.Drawing.Point(44, 61);
             this.totall.Name = "totall";
-            this.totall.Size = new System.Drawing.Size(30, 22);
+            this.totall.Size = new System.Drawing.Size(31, 16);
             this.totall.TabIndex = 9;
             this.totall.TabStop = true;
             this.totall.Text = "****";
@@ -697,10 +698,10 @@
             // 
             this.next1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.next1.AutoSize = true;
-            this.next1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.next1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.next1.Location = new System.Drawing.Point(137, 61);
             this.next1.Name = "next1";
-            this.next1.Size = new System.Drawing.Size(46, 22);
+            this.next1.Size = new System.Drawing.Size(41, 16);
             this.next1.TabIndex = 10;
             this.next1.TabStop = true;
             this.next1.Text = "التالي";
@@ -709,10 +710,10 @@
             // 
             this.date2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.date2.AutoSize = true;
-            this.date2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.date2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.date2.Location = new System.Drawing.Point(44, 37);
             this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(30, 22);
+            this.date2.Size = new System.Drawing.Size(31, 16);
             this.date2.TabIndex = 6;
             this.date2.Text = "****";
             // 
@@ -720,10 +721,10 @@
             // 
             this.date1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.date1.AutoSize = true;
-            this.date1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.date1.Location = new System.Drawing.Point(44, 8);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(30, 22);
+            this.date1.Size = new System.Drawing.Size(31, 16);
             this.date1.TabIndex = 4;
             this.date1.Text = "****";
             // 
@@ -740,20 +741,20 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label6.Location = new System.Drawing.Point(140, 8);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(48, 22);
+            this.Label6.Size = new System.Drawing.Size(39, 16);
             this.Label6.TabIndex = 3;
             this.Label6.Text = "السعر";
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label5.Location = new System.Drawing.Point(20, 8);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(102, 22);
+            this.Label5.Size = new System.Drawing.Size(92, 16);
             this.Label5.TabIndex = 2;
             this.Label5.Text = "تاريخ الصلاحية";
             // 

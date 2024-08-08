@@ -13,7 +13,7 @@ namespace FORMS_CS
         public SqlConnection con;
         public dbcon()
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-BNM51M8\SQLEXPRESS;Initial Catalog=supermarket;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\supertmarket.mdf;Integrated Security=True");
         }
         public SqlConnection connect()
         {

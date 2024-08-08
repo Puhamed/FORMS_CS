@@ -25,6 +25,11 @@ namespace FORMS_CS
 
         private void quantbox_ValueChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void dvg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
