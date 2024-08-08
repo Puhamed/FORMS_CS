@@ -88,10 +88,10 @@
             // 
             this.Label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label2.Location = new System.Drawing.Point(745, 1);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(93, 22);
+            this.Label2.Size = new System.Drawing.Size(85, 16);
             this.Label2.TabIndex = 7;
             this.Label2.Text = "إضافة فاتورة";
             this.Label2.Click += new System.EventHandler(this.Label2_Click);
@@ -148,7 +148,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(0, 51);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(848, 75);
@@ -161,9 +161,9 @@
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.Button4);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(3, 19);
+            this.panel7.Location = new System.Drawing.Point(3, 18);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(159, 53);
+            this.panel7.Size = new System.Drawing.Size(159, 54);
             this.panel7.TabIndex = 22;
             // 
             // button2
@@ -172,14 +172,14 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::FORMS_CS.Properties.Resources.delete;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 53);
+            this.button2.Size = new System.Drawing.Size(78, 54);
             this.button2.TabIndex = 11;
             this.button2.Text = "حذف";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,12 +191,12 @@
             this.Button4.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button4.FlatAppearance.BorderSize = 0;
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button4.ForeColor = System.Drawing.Color.White;
             this.Button4.Location = new System.Drawing.Point(78, 0);
             this.Button4.Margin = new System.Windows.Forms.Padding(5);
             this.Button4.Name = "Button4";
-            this.Button4.Size = new System.Drawing.Size(81, 53);
+            this.Button4.Size = new System.Drawing.Size(81, 54);
             this.Button4.TabIndex = 10;
             this.Button4.Text = "إضافة";
             this.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,21 +206,21 @@
             // priceBox
             // 
             this.priceBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.priceBox.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.priceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.priceBox.Location = new System.Drawing.Point(233, 30);
             this.priceBox.Margin = new System.Windows.Forms.Padding(5);
             this.priceBox.Name = "priceBox";
-            this.priceBox.Size = new System.Drawing.Size(84, 23);
+            this.priceBox.Size = new System.Drawing.Size(84, 22);
             this.priceBox.TabIndex = 21;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(323, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 22);
+            this.label7.Size = new System.Drawing.Size(72, 16);
             this.label7.TabIndex = 20;
             this.label7.Text = "سعر الوحدة";
             // 
@@ -228,61 +228,61 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(508, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 22);
+            this.label6.Size = new System.Drawing.Size(42, 16);
             this.label6.TabIndex = 19;
             this.label6.Text = "الكمية";
             // 
             // quantbox
             // 
             this.quantbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.quantbox.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.quantbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.quantbox.Location = new System.Drawing.Point(416, 32);
             this.quantbox.Name = "quantbox";
-            this.quantbox.Size = new System.Drawing.Size(81, 23);
+            this.quantbox.Size = new System.Drawing.Size(81, 22);
             this.quantbox.TabIndex = 18;
             // 
             // senfBox
             // 
             this.senfBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.senfBox.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.senfBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.senfBox.Location = new System.Drawing.Point(584, 32);
             this.senfBox.Margin = new System.Windows.Forms.Padding(5);
             this.senfBox.Name = "senfBox";
-            this.senfBox.Size = new System.Drawing.Size(172, 23);
+            this.senfBox.Size = new System.Drawing.Size(172, 22);
             this.senfBox.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(764, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 22);
+            this.label4.Size = new System.Drawing.Size(66, 16);
             this.label4.TabIndex = 16;
             this.label4.Text = "اسم الصنف";
             // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(490, 18);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(266, 30);
+            this.comboBox1.Size = new System.Drawing.Size(266, 24);
             this.comboBox1.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(760, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 22);
+            this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "اسم المورد";
             // 
@@ -292,7 +292,7 @@
             this.panel3.Controls.Add(this.TextBox1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.panel3.Location = new System.Drawing.Point(0, 154);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(848, 42);
@@ -304,7 +304,7 @@
             this.button5.Dock = System.Windows.Forms.DockStyle.Left;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(0, 0);
             this.button5.Margin = new System.Windows.Forms.Padding(5);
@@ -318,21 +318,21 @@
             // TextBox1
             // 
             this.TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBox1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.TextBox1.Location = new System.Drawing.Point(681, 9);
             this.TextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(82, 23);
+            this.TextBox1.Size = new System.Drawing.Size(82, 22);
             this.TextBox1.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(764, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 22);
+            this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "رقم الفاتورة";
             this.label1.Click += new System.EventHandler(this.Label2_Click);
@@ -362,17 +362,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(162, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 22);
+            this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 18;
             this.label5.Text = "الاجمالي";
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(162, 37);
@@ -387,7 +387,7 @@
             this.dvg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Khaki;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
@@ -408,7 +408,7 @@
             this.dvg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Alexandria", 9.749999F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
