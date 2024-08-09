@@ -124,7 +124,6 @@
             this.Button1.TabIndex = 0;
             this.Button1.Text = "X";
             this.Button1.UseVisualStyleBackColor = false;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel2
             // 

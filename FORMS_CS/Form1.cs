@@ -85,5 +85,11 @@ namespace FORMS_CS
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            newBill bill = new newBill();
+            bill.Show();
+        }
     }
 }

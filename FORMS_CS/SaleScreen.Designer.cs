@@ -75,9 +75,9 @@
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.Panel10 = new System.Windows.Forms.Panel();
             this.Panel14 = new System.Windows.Forms.Panel();
+            this.count = new System.Windows.Forms.Label();
             this.prize2 = new System.Windows.Forms.Label();
             this.prize1 = new System.Windows.Forms.Label();
-            this.totall = new System.Windows.Forms.LinkLabel();
             this.next1 = new System.Windows.Forms.LinkLabel();
             this.date2 = new System.Windows.Forms.Label();
             this.date1 = new System.Windows.Forms.Label();
@@ -168,7 +168,8 @@
             // 
             this.chose2.AutoSize = true;
             this.chose2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.chose2.Location = new System.Drawing.Point(26, 59);
+            this.chose2.LinkColor = System.Drawing.Color.Gray;
+            this.chose2.Location = new System.Drawing.Point(26, 81);
             this.chose2.Name = "chose2";
             this.chose2.Size = new System.Drawing.Size(43, 16);
             this.chose2.TabIndex = 12;
@@ -330,6 +331,7 @@
             this.TextBox10.Name = "TextBox10";
             this.TextBox10.Size = new System.Drawing.Size(165, 26);
             this.TextBox10.TabIndex = 7;
+            this.TextBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox10_KeyDown);
             // 
             // Panel9
             // 
@@ -443,7 +445,8 @@
             // 
             this.chose1.AutoSize = true;
             this.chose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.chose1.Location = new System.Drawing.Point(26, 13);
+            this.chose1.LinkColor = System.Drawing.Color.Gray;
+            this.chose1.Location = new System.Drawing.Point(26, 44);
             this.chose1.Name = "chose1";
             this.chose1.Size = new System.Drawing.Size(43, 16);
             this.chose1.TabIndex = 11;
@@ -454,12 +457,14 @@
             // 
             this.last1.AutoSize = true;
             this.last1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.last1.Location = new System.Drawing.Point(21, 104);
+            this.last1.LinkColor = System.Drawing.Color.Gray;
+            this.last1.Location = new System.Drawing.Point(30, 80);
             this.last1.Name = "last1";
             this.last1.Size = new System.Drawing.Size(45, 16);
             this.last1.TabIndex = 8;
             this.last1.TabStop = true;
             this.last1.Text = "السابق";
+            this.last1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.last1_LinkClicked);
             // 
             // dvg
             // 
@@ -648,9 +653,10 @@
             // 
             // Panel14
             // 
+            this.Panel14.Controls.Add(this.count);
             this.Panel14.Controls.Add(this.prize2);
             this.Panel14.Controls.Add(this.prize1);
-            this.Panel14.Controls.Add(this.totall);
+            this.Panel14.Controls.Add(this.last1);
             this.Panel14.Controls.Add(this.next1);
             this.Panel14.Controls.Add(this.date2);
             this.Panel14.Controls.Add(this.date1);
@@ -659,6 +665,17 @@
             this.Panel14.Name = "Panel14";
             this.Panel14.Size = new System.Drawing.Size(217, 113);
             this.Panel14.TabIndex = 13;
+            // 
+            // count
+            // 
+            this.count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.count.AutoSize = true;
+            this.count.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.count.Location = new System.Drawing.Point(93, 80);
+            this.count.Name = "count";
+            this.count.Size = new System.Drawing.Size(31, 16);
+            this.count.TabIndex = 11;
+            this.count.Text = "****";
             // 
             // prize2
             // 
@@ -682,29 +699,20 @@
             this.prize1.TabIndex = 5;
             this.prize1.Text = "****";
             // 
-            // totall
-            // 
-            this.totall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.totall.AutoSize = true;
-            this.totall.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.totall.Location = new System.Drawing.Point(44, 61);
-            this.totall.Name = "totall";
-            this.totall.Size = new System.Drawing.Size(31, 16);
-            this.totall.TabIndex = 9;
-            this.totall.TabStop = true;
-            this.totall.Text = "****";
-            // 
             // next1
             // 
             this.next1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.next1.AutoSize = true;
+            this.next1.DisabledLinkColor = System.Drawing.Color.Gray;
             this.next1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.next1.Location = new System.Drawing.Point(137, 61);
+            this.next1.LinkColor = System.Drawing.Color.Gray;
+            this.next1.Location = new System.Drawing.Point(140, 80);
             this.next1.Name = "next1";
             this.next1.Size = new System.Drawing.Size(41, 16);
             this.next1.TabIndex = 10;
             this.next1.TabStop = true;
             this.next1.Text = "التالي";
+            this.next1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.next1_LinkClicked);
             // 
             // date2
             // 
@@ -762,7 +770,6 @@
             // 
             this.Panel12.Controls.Add(this.chose2);
             this.Panel12.Controls.Add(this.chose1);
-            this.Panel12.Controls.Add(this.last1);
             this.Panel12.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel12.Location = new System.Drawing.Point(0, 0);
             this.Panel12.Name = "Panel12";
@@ -844,7 +851,6 @@
         internal System.Windows.Forms.Panel Panel14;
         internal System.Windows.Forms.Label prize2;
         internal System.Windows.Forms.Label prize1;
-        internal System.Windows.Forms.LinkLabel totall;
         internal System.Windows.Forms.LinkLabel next1;
         internal System.Windows.Forms.Label date2;
         internal System.Windows.Forms.Label date1;
@@ -859,8 +865,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalcol;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.NumericUpDown quantbox;
         internal System.Windows.Forms.TextBox TextBox1;
         internal System.Windows.Forms.ComboBox ComboBox1;
+        internal System.Windows.Forms.Label count;
+        internal System.Windows.Forms.NumericUpDown quantbox;
     }
 }
