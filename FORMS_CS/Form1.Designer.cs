@@ -36,7 +36,7 @@
             this.Button1 = new System.Windows.Forms.Button();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.Label1 = new System.Windows.Forms.Label();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
+            this.current = new System.Windows.Forms.TextBox();
             this.Button8 = new System.Windows.Forms.Button();
             this.Button7 = new System.Windows.Forms.Button();
             this.Button6 = new System.Windows.Forms.Button();
@@ -123,12 +123,13 @@
             this.Button1.TabIndex = 0;
             this.Button1.Text = "X";
             this.Button1.UseVisualStyleBackColor = false;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // Panel2
             // 
             this.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(84)))), ((int)(((byte)(138)))));
             this.Panel2.Controls.Add(this.Label1);
-            this.Panel2.Controls.Add(this.TextBox1);
+            this.Panel2.Controls.Add(this.current);
             this.Panel2.Controls.Add(this.Button8);
             this.Panel2.Controls.Add(this.Button7);
             this.Panel2.Controls.Add(this.Button6);
@@ -151,13 +152,13 @@
             this.Label1.TabIndex = 6;
             this.Label1.Text = "اسم";
             // 
-            // TextBox1
+            // current
             // 
-            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.TextBox1.Location = new System.Drawing.Point(12, 3);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(212, 22);
-            this.TextBox1.TabIndex = 5;
+            this.current.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.current.Location = new System.Drawing.Point(12, 3);
+            this.current.Name = "current";
+            this.current.Size = new System.Drawing.Size(212, 22);
+            this.current.TabIndex = 5;
             // 
             // Button8
             // 
@@ -208,6 +209,7 @@
             this.Button6.Text = "المخزن";
             this.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Button6.UseVisualStyleBackColor = false;
+            this.Button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // Button5
             // 
@@ -264,6 +266,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.Panel1.ResumeLayout(false);
@@ -284,7 +287,7 @@
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.TextBox TextBox1;
+        internal System.Windows.Forms.TextBox current;
         internal System.Windows.Forms.Button Button8;
         internal System.Windows.Forms.Button Button7;
         internal System.Windows.Forms.Button Button6;

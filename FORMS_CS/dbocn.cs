@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -39,7 +35,7 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt;
         }
-        public void Custom_Add(string Nation,string qaid,string name,string phone_no,string city,string id,string Nation_pic,string city_pic,string id_pic,string contract)
+       /* public void Custom_Add(string Nation, string qaid, string name, string phone_no, string city, string id, string Nation_pic, string city_pic, string id_pic, string contract)
         {
             disconnect();
             string command = "insert into Custom_data (Nation,qaid, name, phone_no, city, id,Nation_pic, city_pic, id_pic, contract, date_) values('" + Nation + "','" + qaid + "', N'" + name + "',N'" + phone_no + "', N'" + city + "',N'" + id + "',N'" + Nation_pic + "',N'" + city_pic + "',N'" + id_pic + "', N'" + contract + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "')";
@@ -47,6 +43,6 @@ namespace FORMS_CS
             cmd.ExecuteNonQuery();
             disconnect();
         }
-   
+       */
     }
 }

@@ -11,13 +11,20 @@ using System.Windows.Forms;
 namespace FORMS_CS
 {
     public partial class newBill : Form
+
     {
-        int count = 0;
-        bool x = false;
+        dbcon li = new dbcon();
+  
         public newBill()
         {
             InitializeComponent();
         }
+        private void newBill_Load(object sender, EventArgs e)
+        {// ياحفيظ هاذي مبتش تخدم الدالة هذي كتبتها نا مقدرتش انطلعها من الديزاين شوفها كنها عشان الموردين
+            MessageBox.Show("sss");
+
+        }
+
 
         private void Label2_Click(object sender, EventArgs e)
         {
@@ -62,9 +69,6 @@ namespace FORMS_CS
             }*/
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
     }
 }

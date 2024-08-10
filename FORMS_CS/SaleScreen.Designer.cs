@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel6 = new System.Windows.Forms.Panel();
             this.Button12 = new System.Windows.Forms.Button();
             this.Button8 = new System.Windows.Forms.Button();
@@ -75,9 +75,9 @@
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.Panel10 = new System.Windows.Forms.Panel();
             this.Panel14 = new System.Windows.Forms.Panel();
+            this.count = new System.Windows.Forms.Label();
             this.prize2 = new System.Windows.Forms.Label();
             this.prize1 = new System.Windows.Forms.Label();
-            this.totall = new System.Windows.Forms.LinkLabel();
             this.next1 = new System.Windows.Forms.LinkLabel();
             this.date2 = new System.Windows.Forms.Label();
             this.date1 = new System.Windows.Forms.Label();
@@ -120,7 +120,7 @@
             // 
             this.Button12.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button12.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button12.ForeColor = System.Drawing.Color.White;
             this.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button12.Location = new System.Drawing.Point(410, 0);
@@ -136,7 +136,7 @@
             // 
             this.Button8.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button8.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button8.ForeColor = System.Drawing.Color.White;
             this.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button8.Location = new System.Drawing.Point(533, 0);
@@ -152,7 +152,7 @@
             // 
             this.Button7.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button7.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button7.ForeColor = System.Drawing.Color.White;
             this.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button7.Location = new System.Drawing.Point(656, 0);
@@ -163,14 +163,16 @@
             this.Button7.Text = "فاتورة جديدة";
             this.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Button7.UseVisualStyleBackColor = true;
+            this.Button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // chose2
             // 
             this.chose2.AutoSize = true;
-            this.chose2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.chose2.Location = new System.Drawing.Point(26, 59);
+            this.chose2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.chose2.LinkColor = System.Drawing.Color.Gray;
+            this.chose2.Location = new System.Drawing.Point(26, 81);
             this.chose2.Name = "chose2";
-            this.chose2.Size = new System.Drawing.Size(43, 22);
+            this.chose2.Size = new System.Drawing.Size(43, 16);
             this.chose2.TabIndex = 12;
             this.chose2.TabStop = true;
             this.chose2.Text = "اختيار";
@@ -278,24 +280,24 @@
             this.senfsgridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.senfsgridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.senfsgridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(45)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.senfsgridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(45)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.senfsgridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.senfsgridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.senfsgridview.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.senfsgridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.senfsgridview.DefaultCellStyle = dataGridViewCellStyle12;
             this.senfsgridview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.senfsgridview.EnableHeadersVisualStyles = false;
             this.senfsgridview.Location = new System.Drawing.Point(0, 71);
@@ -305,14 +307,14 @@
             this.senfsgridview.ReadOnly = true;
             this.senfsgridview.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.senfsgridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.senfsgridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.senfsgridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.senfsgridview.RowHeadersVisible = false;
             this.senfsgridview.ShowCellErrors = false;
             this.senfsgridview.ShowCellToolTips = false;
@@ -330,6 +332,7 @@
             this.TextBox10.Name = "TextBox10";
             this.TextBox10.Size = new System.Drawing.Size(165, 26);
             this.TextBox10.TabIndex = 7;
+            this.TextBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox10_KeyDown);
             // 
             // Panel9
             // 
@@ -348,7 +351,7 @@
             this.Panel4.Controls.Add(this.Button3);
             this.Panel4.Controls.Add(this.Button4);
             this.Panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Panel4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Panel4.Location = new System.Drawing.Point(165, 0);
             this.Panel4.Margin = new System.Windows.Forms.Padding(5);
             this.Panel4.Name = "Panel4";
@@ -359,7 +362,7 @@
             // 
             this.Button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button1.ForeColor = System.Drawing.Color.White;
             this.Button1.Location = new System.Drawing.Point(0, 240);
             this.Button1.Margin = new System.Windows.Forms.Padding(5);
@@ -373,7 +376,7 @@
             // 
             this.Button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button6.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button6.ForeColor = System.Drawing.Color.White;
             this.Button6.Location = new System.Drawing.Point(0, 192);
             this.Button6.Margin = new System.Windows.Forms.Padding(5);
@@ -387,7 +390,7 @@
             // 
             this.Button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button2.ForeColor = System.Drawing.Color.White;
             this.Button2.Location = new System.Drawing.Point(0, 144);
             this.Button2.Margin = new System.Windows.Forms.Padding(5);
@@ -401,7 +404,7 @@
             // 
             this.Button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button5.ForeColor = System.Drawing.Color.White;
             this.Button5.Location = new System.Drawing.Point(0, 96);
             this.Button5.Margin = new System.Windows.Forms.Padding(5);
@@ -415,7 +418,7 @@
             // 
             this.Button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button3.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button3.ForeColor = System.Drawing.Color.White;
             this.Button3.Location = new System.Drawing.Point(0, 48);
             this.Button3.Margin = new System.Windows.Forms.Padding(5);
@@ -429,7 +432,7 @@
             // 
             this.Button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Button4.ForeColor = System.Drawing.Color.White;
             this.Button4.Location = new System.Drawing.Point(0, 0);
             this.Button4.Margin = new System.Windows.Forms.Padding(5);
@@ -442,10 +445,11 @@
             // chose1
             // 
             this.chose1.AutoSize = true;
-            this.chose1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.chose1.Location = new System.Drawing.Point(26, 13);
+            this.chose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.chose1.LinkColor = System.Drawing.Color.Gray;
+            this.chose1.Location = new System.Drawing.Point(26, 44);
             this.chose1.Name = "chose1";
-            this.chose1.Size = new System.Drawing.Size(43, 22);
+            this.chose1.Size = new System.Drawing.Size(43, 16);
             this.chose1.TabIndex = 11;
             this.chose1.TabStop = true;
             this.chose1.Text = "اختيار";
@@ -453,13 +457,15 @@
             // last1
             // 
             this.last1.AutoSize = true;
-            this.last1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.last1.Location = new System.Drawing.Point(21, 104);
+            this.last1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.last1.LinkColor = System.Drawing.Color.Gray;
+            this.last1.Location = new System.Drawing.Point(30, 80);
             this.last1.Name = "last1";
-            this.last1.Size = new System.Drawing.Size(55, 22);
+            this.last1.Size = new System.Drawing.Size(45, 16);
             this.last1.TabIndex = 8;
             this.last1.TabStop = true;
             this.last1.Text = "السابق";
+            this.last1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.last1_LinkClicked);
             // 
             // dvg
             // 
@@ -468,14 +474,14 @@
             this.dvg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dvg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dvg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
@@ -489,17 +495,18 @@
             this.dvg.Name = "dvg";
             this.dvg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dvg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dvg.RowHeadersVisible = false;
             this.dvg.Size = new System.Drawing.Size(779, 214);
             this.dvg.TabIndex = 2;
+            this.dvg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_CellContentClick);
             // 
             // No
             // 
@@ -587,10 +594,10 @@
             // 
             this.Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label4.Location = new System.Drawing.Point(354, 20);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(80, 22);
+            this.Label4.Size = new System.Drawing.Size(66, 16);
             this.Label4.TabIndex = 16;
             this.Label4.Text = "اسم الزبون";
             // 
@@ -598,10 +605,10 @@
             // 
             this.Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label3.Location = new System.Drawing.Point(352, 83);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(53, 22);
+            this.Label3.Size = new System.Drawing.Size(42, 16);
             this.Label3.TabIndex = 17;
             this.Label3.Text = "الكمية";
             // 
@@ -647,9 +654,10 @@
             // 
             // Panel14
             // 
+            this.Panel14.Controls.Add(this.count);
             this.Panel14.Controls.Add(this.prize2);
             this.Panel14.Controls.Add(this.prize1);
-            this.Panel14.Controls.Add(this.totall);
+            this.Panel14.Controls.Add(this.last1);
             this.Panel14.Controls.Add(this.next1);
             this.Panel14.Controls.Add(this.date2);
             this.Panel14.Controls.Add(this.date1);
@@ -659,14 +667,25 @@
             this.Panel14.Size = new System.Drawing.Size(217, 113);
             this.Panel14.TabIndex = 13;
             // 
+            // count
+            // 
+            this.count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.count.AutoSize = true;
+            this.count.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.count.Location = new System.Drawing.Point(93, 80);
+            this.count.Name = "count";
+            this.count.Size = new System.Drawing.Size(31, 16);
+            this.count.TabIndex = 11;
+            this.count.Text = "****";
+            // 
             // prize2
             // 
             this.prize2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.prize2.AutoSize = true;
-            this.prize2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.prize2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.prize2.Location = new System.Drawing.Point(144, 37);
             this.prize2.Name = "prize2";
-            this.prize2.Size = new System.Drawing.Size(30, 22);
+            this.prize2.Size = new System.Drawing.Size(31, 16);
             this.prize2.TabIndex = 7;
             this.prize2.Text = "****";
             // 
@@ -674,45 +693,36 @@
             // 
             this.prize1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.prize1.AutoSize = true;
-            this.prize1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.prize1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.prize1.Location = new System.Drawing.Point(144, 8);
             this.prize1.Name = "prize1";
-            this.prize1.Size = new System.Drawing.Size(30, 22);
+            this.prize1.Size = new System.Drawing.Size(31, 16);
             this.prize1.TabIndex = 5;
             this.prize1.Text = "****";
-            // 
-            // totall
-            // 
-            this.totall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.totall.AutoSize = true;
-            this.totall.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.totall.Location = new System.Drawing.Point(44, 61);
-            this.totall.Name = "totall";
-            this.totall.Size = new System.Drawing.Size(30, 22);
-            this.totall.TabIndex = 9;
-            this.totall.TabStop = true;
-            this.totall.Text = "****";
             // 
             // next1
             // 
             this.next1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.next1.AutoSize = true;
-            this.next1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.next1.Location = new System.Drawing.Point(137, 61);
+            this.next1.DisabledLinkColor = System.Drawing.Color.Gray;
+            this.next1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.next1.LinkColor = System.Drawing.Color.Gray;
+            this.next1.Location = new System.Drawing.Point(140, 80);
             this.next1.Name = "next1";
-            this.next1.Size = new System.Drawing.Size(46, 22);
+            this.next1.Size = new System.Drawing.Size(41, 16);
             this.next1.TabIndex = 10;
             this.next1.TabStop = true;
             this.next1.Text = "التالي";
+            this.next1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.next1_LinkClicked);
             // 
             // date2
             // 
             this.date2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.date2.AutoSize = true;
-            this.date2.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.date2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.date2.Location = new System.Drawing.Point(44, 37);
             this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(30, 22);
+            this.date2.Size = new System.Drawing.Size(31, 16);
             this.date2.TabIndex = 6;
             this.date2.Text = "****";
             // 
@@ -720,10 +730,10 @@
             // 
             this.date1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.date1.AutoSize = true;
-            this.date1.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.date1.Location = new System.Drawing.Point(44, 8);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(30, 22);
+            this.date1.Size = new System.Drawing.Size(31, 16);
             this.date1.TabIndex = 4;
             this.date1.Text = "****";
             // 
@@ -740,20 +750,20 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label6.Location = new System.Drawing.Point(140, 8);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(48, 22);
+            this.Label6.Size = new System.Drawing.Size(39, 16);
             this.Label6.TabIndex = 3;
             this.Label6.Text = "السعر";
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label5.Location = new System.Drawing.Point(20, 8);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(102, 22);
+            this.Label5.Size = new System.Drawing.Size(92, 16);
             this.Label5.TabIndex = 2;
             this.Label5.Text = "تاريخ الصلاحية";
             // 
@@ -761,7 +771,6 @@
             // 
             this.Panel12.Controls.Add(this.chose2);
             this.Panel12.Controls.Add(this.chose1);
-            this.Panel12.Controls.Add(this.last1);
             this.Panel12.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel12.Location = new System.Drawing.Point(0, 0);
             this.Panel12.Name = "Panel12";
@@ -843,7 +852,6 @@
         internal System.Windows.Forms.Panel Panel14;
         internal System.Windows.Forms.Label prize2;
         internal System.Windows.Forms.Label prize1;
-        internal System.Windows.Forms.LinkLabel totall;
         internal System.Windows.Forms.LinkLabel next1;
         internal System.Windows.Forms.Label date2;
         internal System.Windows.Forms.Label date1;
@@ -858,8 +866,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalcol;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.NumericUpDown quantbox;
         internal System.Windows.Forms.TextBox TextBox1;
         internal System.Windows.Forms.ComboBox ComboBox1;
+        internal System.Windows.Forms.Label count;
+        internal System.Windows.Forms.NumericUpDown quantbox;
     }
 }
