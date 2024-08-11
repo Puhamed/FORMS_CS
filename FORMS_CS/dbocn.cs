@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace FORMS_CS
 {
@@ -9,7 +10,7 @@ namespace FORMS_CS
         public SqlConnection con;
         public dbcon()
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-BNM51M8\SQLEXPRESS;Initial Catalog=supermarket;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\supertmarket.mdf;Integrated Security=True");
         }
         public SqlConnection connect()
         {
@@ -43,6 +44,46 @@ namespace FORMS_CS
             cmd.ExecuteNonQuery();
             disconnect();
         }
+<<<<<<< HEAD
        */
+=======
+        public DataTable fill_sup()//لتعبة كوبو بوكس الموردين
+        {
+            DataTable dt = new DataTable();
+            disconnect();
+            SqlDataAdapter sa = new SqlDataAdapter("select * from suppliers",con)
+                ; sa.Fill(dt);
+            return dt;
+        }
+        public DataTable data_tem(string num)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
+        {
+        DataTable dt =new DataTable();
+            string str = "select * from items where item_id = @num";
+disconnect();
+
+            SqlDataAdapter da=new SqlDataAdapter(str,con) ;
+            da.SelectCommand.Parameters.AddWithValue("@num", num);
+
+            da.Fill(dt);
+            //لتحديد العنصر المختار 
+            if (dt.Rows.Count > 0)// للتحقق من انه يوجد عنصر ب الرقم المختار
+            {
+            }
+            else
+            {
+                MessageBox.Show("خطا في الرقم", "لا يوجد عنصر بهاذا الخطا");
+            }
+               
+            
+           
+            return dt;
+        }
+        public DataTable items_sell(DataTable dt) 
+        {
+            DataTable dataTable = new DataTable();
+
+            return dataTable;
+        }
+>>>>>>> 22a2926245395d05d23a48d870cf8549fad4939a
     }
 }

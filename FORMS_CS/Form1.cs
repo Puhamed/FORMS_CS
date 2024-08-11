@@ -89,6 +89,7 @@ namespace FORMS_CS
             newBill bill = new newBill();
             bill.Show();
         }
+<<<<<<< HEAD
 
         private void Button6_Click(object sender, EventArgs e)
         {
@@ -114,5 +115,7 @@ namespace FORMS_CS
                 return;
             }
         }
+=======
+>>>>>>> 22a2926245395d05d23a48d870cf8549fad4939a
     }
 }

@@ -43,6 +43,7 @@
             this.Button5 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -128,6 +129,7 @@
             // Panel2
             // 
             this.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(84)))), ((int)(((byte)(138)))));
+            this.Panel2.Controls.Add(this.button9);
             this.Panel2.Controls.Add(this.Label1);
             this.Panel2.Controls.Add(this.current);
             this.Panel2.Controls.Add(this.Button8);
@@ -253,6 +255,23 @@
             this.Panel4.Size = new System.Drawing.Size(1250, 46);
             this.Panel4.TabIndex = 7;
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Image = global::FORMS_CS.Properties.Resources.salesscreen;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(410, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(140, 37);
+            this.button9.TabIndex = 7;
+            this.button9.Text = "اضافة فاتورة";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +313,7 @@
         internal System.Windows.Forms.Button Button5;
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.Panel Panel4;
+        internal System.Windows.Forms.Button button9;
     }
 }
 

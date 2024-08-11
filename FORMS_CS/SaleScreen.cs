@@ -13,7 +13,11 @@ namespace FORMS_CS
     public partial class SaleScreen : Form
     {
         dbcon con = new dbcon();
+<<<<<<< HEAD
         int i = 2;// متغير مساعد ل تحديد عدد العناصر المكرره يستخدم في دالة chose
+=======
+      int i = 2;// متغير مساعد ل تحديد عدد العناصر المكرره يستخدم في دالة chose
+>>>>>>> 22a2926245395d05d23a48d870cf8549fad4939a
         DataTable dt=new DataTable();//جدول مساعد ل تحديد العناصر المكرره فيه
 
         public SaleScreen()
@@ -60,6 +64,7 @@ namespace FORMS_CS
         {
             
         }
+<<<<<<< HEAD
 
         private void dvg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -106,7 +111,50 @@ namespace FORMS_CS
 
         private void Button7_Click(object sender, EventArgs e)
         {
+=======
+>>>>>>> 22a2926245395d05d23a48d870cf8549fad4939a
 
+        private void dvg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TextBox10_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (TextBox10.Text == "")
+                {
+                    MessageBox.Show(" باركود", "لرجاء ادخال باركود");
+                }
+                else
+                {
+                     dt = con.data_tem(TextBox10.Text);
+                    if (dt.Rows.Count > 1)// للتحقق من انه العنصر مخزن اكثر من مره
+                    {
+                        chose();
+                    }
+
+                }
+            }
+        }
+
+        private void next1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (next1.LinkColor == System.Drawing.Color.Gray)// لضمان عدم التقدم لخانه غير موجوده
+                return;
+             
+
+            i = i + 2;
+            chose();
+        }
+
+        private void last1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (last1.LinkColor == System.Drawing.Color.Gray)//لضمان عدم الرجوع الي خانه غير موجوده
+                return;
+            i = i - 2;
+            chose();
         }
     }
 }
