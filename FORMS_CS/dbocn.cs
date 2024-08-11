@@ -5,14 +5,14 @@ using System.Windows.Forms;
 
 namespace FORMS_CS
 {
-    public class dbcon
+    public class Dbcon
     {
         public SqlConnection con;
-        public dbcon()
+        public Dbcon()
         {
             con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\supertmarket.mdf;Integrated Security=True");
         }
-        public SqlConnection connect()
+        public SqlConnection Connect()
         {
             if (con.State == ConnectionState.Closed == true)
             {
@@ -21,45 +21,43 @@ namespace FORMS_CS
             return con;
 
         }
-        public void disconnect()
+        public void Disconnect()
         {
             if (con.State == ConnectionState.Open == true)
             {
                 con.Close();
             }
         }
-        public DataTable fillsenfs()
+        public DataTable Fillsenfs()
         {
             DataTable dt = new DataTable();
-            disconnect();
+           Disconnect();
             SqlDataAdapter sa = new SqlDataAdapter("select item_name as[الأصناف] from items", con);
             sa.Fill(dt);
             return dt;
         }
-       /* public void Custom_Add(string Nation, string qaid, string name, string phone_no, string city, string id, string Nation_pic, string city_pic, string id_pic, string contract)
+        public void Custom_Add(string Nation, string qaid, string name, string phone_no, string city, string id, string Nation_pic, string city_pic, string id_pic, string contract)
         {
-            disconnect();
+            Disconnect();
             string command = "insert into Custom_data (Nation,qaid, name, phone_no, city, id,Nation_pic, city_pic, id_pic, contract, date_) values('" + Nation + "','" + qaid + "', N'" + name + "',N'" + phone_no + "', N'" + city + "',N'" + id + "',N'" + Nation_pic + "',N'" + city_pic + "',N'" + id_pic + "', N'" + contract + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "')";
-            SqlCommand cmd = new SqlCommand(command, connect());
+            SqlCommand cmd = new SqlCommand(command, Connect());
             cmd.ExecuteNonQuery();
-            disconnect();
+            Disconnect();
         }
-<<<<<<< HEAD
-       */
-=======
-        public DataTable fill_sup()//لتعبة كوبو بوكس الموردين
+
+        public DataTable Fill_sup()//لتعبة كوبو بوكس الموردين
         {
             DataTable dt = new DataTable();
-            disconnect();
+            Disconnect();
             SqlDataAdapter sa = new SqlDataAdapter("select * from suppliers",con)
                 ; sa.Fill(dt);
             return dt;
         }
-        public DataTable data_tem(string num)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
+        public DataTable Data_tem(string num)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
         {
         DataTable dt =new DataTable();
             string str = "select * from items where item_id = @num";
-disconnect();
+Disconnect();
 
             SqlDataAdapter da=new SqlDataAdapter(str,con) ;
             da.SelectCommand.Parameters.AddWithValue("@num", num);
@@ -78,12 +76,11 @@ disconnect();
            
             return dt;
         }
-        public DataTable items_sell(DataTable dt) 
+        public DataTable Items_sell(DataTable dt) 
         {
             DataTable dataTable = new DataTable();
 
             return dataTable;
         }
->>>>>>> 22a2926245395d05d23a48d870cf8549fad4939a
     }
 }

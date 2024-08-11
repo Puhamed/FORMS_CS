@@ -13,13 +13,13 @@ namespace FORMS_CS
     public partial class newBill : Form
 
     {
-        dbcon li = new dbcon();
+      readonly  Dbcon Li = new Dbcon();
   
         public newBill()
         {
             InitializeComponent();
         }
-        private void newBill_Load(object sender, EventArgs e)
+        private void NewBill_Load(object sender, EventArgs e)
         {// ياحفيظ هاذي مبتش تخدم الدالة هذي كتبتها نا مقدرتش انطلعها من الديزاين شوفها كنها عشان الموردين
             MessageBox.Show("sss");
 
