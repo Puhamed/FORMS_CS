@@ -47,17 +47,7 @@ namespace FORMS_CS
 
             mainpanel.Controls.Clear();
             Forms(Sc);
-          /*  if (fr == false)
-            {
-                forms(sc);
-                fr = true;
-            }
-            else
-            {
-                sc.Hide();
-                mainpanel.Controls.Clear();
-                fr = false;
-            }*/
+    
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)

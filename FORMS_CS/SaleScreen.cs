@@ -17,7 +17,7 @@ namespace FORMS_CS
        readonly Dbcon con = new Dbcon();
         int i = 2;// متغير مساعد ل تحديد عدد العناصر المكرره يستخدم في دالة chose
         string valued;//متغير مساعد ل حفظ قيمة التاريخ في حالة تكرار العناصر
-        string valuep;//متغير مساعد لحفظ قيمة السعر في حالة تكرار العناصر
+        double valuep;//متغير مساعد لحفظ قيمة السعر في حالة تكرار العناصر
         DataTable dt = new DataTable();//جدول مساعد ل تحديد العناصر المكرره فيه
         SqlDataAdapter da;
         DataTable newtable = new DataTable();
@@ -83,9 +83,9 @@ namespace FORMS_CS
                 {
                     foreach (DataRow row in dt.Rows)
                     {
-                 
 
-                    if ((string)row["item_date"] == valued && (string)row["item_prizes"] == valuep)
+                    DateTime date_co = Convert.ToDateTime(valued); 
+                    if ( Convert.ToDateTime (row["item_date"]) == date_co && Convert.ToDouble(row["item_prizes"]) == valuep)
                     {
                         newtable.ImportRow(row);
                         dt.Clear();
@@ -114,7 +114,7 @@ namespace FORMS_CS
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (TextBox10.Text == "")
+                if (TextBox10.Text == ""|| TextBox10.Text == null)
                 {
                     MessageBox.Show(" باركود", "لرجاء ادخال باركود");
                 }
@@ -152,7 +152,7 @@ namespace FORMS_CS
             if (chose1.LinkColor == System.Drawing.Color.Gray)//لضمان عدم الرجوع الي خانه غير موجوده
                 return;
             valued = date1.Text;
-            valuep = prize1.Text;
+            valuep = Convert.ToDouble(prize1.Text);
             addtogrid();
             restchose();
         }
@@ -162,7 +162,7 @@ namespace FORMS_CS
             if (chose2.LinkColor == System.Drawing.Color.Gray)//لضمان عدم الرجوع الي خانه غير موجوده
                 return;
             valued = date2.Text;
-             valuep = prize2.Text;
+             valuep = Convert.ToDouble(prize2.Text);
             addtogrid();
             restchose();
         }
