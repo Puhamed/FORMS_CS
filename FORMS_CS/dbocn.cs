@@ -28,6 +28,7 @@ namespace FORMS_CS
                 con.Close();
             }
         }
+    
         public DataTable Fillsenfs()
         {
             DataTable dt = new DataTable();
@@ -57,30 +58,24 @@ namespace FORMS_CS
         {
         DataTable dt =new DataTable();
             string str = "select * from items where item_id = @num";
-Disconnect();
 
             SqlDataAdapter da=new SqlDataAdapter(str,con) ;
             da.SelectCommand.Parameters.AddWithValue("@num", num);
 
             da.Fill(dt);
             //لتحديد العنصر المختار 
-            if (dt.Rows.Count > 0)// للتحقق من انه يوجد عنصر ب الرقم المختار
+            if (dt.Rows.Count > 1)// للتحقق من انه يوجد عنصر ب الرقم المختار
             {
             }
-            else
+            else if (dt.Rows.Count==0)
             {
                 MessageBox.Show("خطا في الرقم", "لا يوجد عنصر بهاذا الخطا");
             }
-               
-            
-           
-            return dt;
-        }
-        public DataTable Items_sell(DataTable dt) 
-        {
-            DataTable dataTable = new DataTable();
 
-            return dataTable;
+
+
+            return dt; 
         }
+     
     }
 }
