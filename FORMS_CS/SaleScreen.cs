@@ -19,7 +19,7 @@ namespace FORMS_CS
         string valued;//متغير مساعد ل حفظ قيمة التاريخ في حالة تكرار العناصر
         double valuep;//متغير مساعد لحفظ قيمة السعر في حالة تكرار العناصر
         DataTable dt = new DataTable();//جدول مساعد ل تحديد العناصر المكرره فيه
-        DataTable newtable = new DataTable();
+        List<DateTime> dates= new List<DateTime>();
 
         public SaleScreen()
         {
@@ -65,131 +65,48 @@ namespace FORMS_CS
 
             last1.LinkColor = i == 2 ? System.Drawing.Color.Gray : System.Drawing.Color.Blue;
         }
-        private void Datagrid()//لضبط اتجاهات النص
+        public void addtogrid()
         {
-            dvg.RightToLeft = RightToLeft.Yes;
-            dvg.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-        }
-        private void Newbell()//لتهيئة اول عنصر في الفاتورة
-
-
-        {
-            newtable = dt.Clone();
-            dvg.DataSource = newtable.DefaultView.ToTable(false, "item_id", "item_name", "item_prizes");
-            Datagrid();
-            DataGridViewColumn quntityc = new DataGridViewTextBoxColumn();
-            DataGridViewColumn totalc = new DataGridViewTextBoxColumn();
-            dvg.Columns.Add(quntityc);
-            dvg.Columns.Add(totalc);
-            dvg.Columns["item_id"].HeaderText = "رقم العنصر";
-            dvg.Columns["item_name"].HeaderText = "اسم العنصر";
-            dvg.Columns["item_prizes"].HeaderText = "السعر";
-            quntityc.HeaderText = "الكمية";
-            quntityc.Name = "cc";
-            quntityc.ValueType = typeof(double);
-            totalc.HeaderText = "الاجمالي";
-            totalc.Name = "tt";
-            dvg.AllowUserToAddRows = false;
-
-        }
-        private void Add1(DataRow row, out bool cheack)//
-        {
-             cheack = false;
-            for (int s = 0; s <= newtable.Rows.Count - 1; s++)
+            DateTime date_co = Convert.ToDateTime(valued);
+            foreach (DataRow row in dt.Rows)
             {
-                if (row.ItemArray.SequenceEqual (newtable.Rows[s].ItemArray))
+                if (Convert.ToDateTime(row["item_date"]) == date_co && Convert.ToDouble(row["item_prizes"]) == valuep) 
                 {
-                    cheack = true;
-                    if (quantbox.Value == 1)
-                        dvg.Rows[s].Cells["cc"].Value = (double)dvg.Rows[s].Cells["cc"].Value +1;
-                    else
-                        dvg.Rows[s].Cells["cc"].Value = +quantbox.Value;
 
-                    break;
-                }
-            }
-        }
-        private void Addtogrid()//لاضافة العنصر الي الداتا جريد فيو
-      
-        { 
-            if (newtable.Rows.Count == 0)//  اول عنصر في الفاتورة
-            {
-              Newbell();
-            }
-
-
-            if (dt.Rows.Count > 1)//  عنصر ف الفاتورة متكرر
-                {
-                    foreach (DataRow row in dt.Rows)
+                    foreach (DataGridViewRow row1 in dvg.Rows)
                     {
-                    DateTime date_co = Convert.ToDateTime(valued); 
-                    if ( Convert.ToDateTime (row["item_date"]) == date_co && Convert.ToDouble(row["item_prizes"]) == valuep)
-                    {
-                        Add1(row, out bool ceake) ;
-                        if (ceake == false)
+                        if (dvg.Rows.Count == 0)
+                            break;
+                        if ((row1.Cells[0]).Value.Equals( row["item_id"]) && row1.Cells[2].Value.Equals (row["item_prizes"])&& Convert.ToDateTime( row["item_date"]) == dates[row1.Index])
                         {
-                            newtable.ImportRow(row);
-
                             if (quantbox.Value == 1)
-                            {
-                                dvg.DataSource = newtable.DefaultView.ToTable(false, "item_id", "item_name", "item_prizes");//لحجب بعض العناصر
-
-                                // Convert.ToDouble(dvg.Rows[dvg.Rows.Count - 1].Cells["cc"].Value = 1);//مشكلة هنا
-                                dvg.Rows[0].Cells["cc"].Value = 1;
-                              //  double value = Convert.ToDouble(dvg.Rows[dvg.Rows.Count - 1].Cells["cc"].Value);
-                            }
+                                dvg.Rows[row1.Index].Cells[3].Value =Convert.ToInt32( dvg.Rows[row1.Index].Cells[3].Value)+1;
                             else
-                                dvg.Rows[dvg.Rows.Count - 1].Cells["cc"].Value = quantbox.Value;//يحتاج الي تعديل 
+                                dvg.Rows[row1.Index].Cells[3].Value = Convert.ToInt32 ( dvg.Rows[row1.Index].Cells[3].Value)+quantbox.Value;
 
+                            dvg.Refresh();
+                            return;
                         }
-                        break;
+
+
                     }
+                    if (quantbox.Value == 1)
+                    {
+                        dvg.Rows.Add(row["item_id"], row["item_name"], row["item_prizes"], 1, row["item_prizes"]);
+                        dates.Add(date_co);
+                    }
+                    else 
+                    {
+                        dvg.Rows.Add(row["item_id"], row["item_name"], row["item_prizes"], quantbox.Value, row["item_prizes"]);
+                        dates.Add(date_co);
                     }
                 }
-                else// عنصر ف الفاتورة ليس متكرر
-                {
-                    dt.Rows.Add(newtable);// يحتاج الي تعديل 
-                }
-
-            dvg.DataSource = newtable.DefaultView.ToTable(false, "item_id", "item_name", "item_prizes");//لحجب بعض العناصر
-            Datagrid();
-            Result();
-            dt.Clear();
+            }
+            dvg.Refresh();
         }
-        private void Result()// لاحساب الكمية و السعر الاجمالي
-        {
-        //    if (quantbox.Value == 1)
-        //    {
-        //        for (int i = 0; i <= newtable.Rows.Count; i++)
-        //        {
-        //            if (newtable.Rows[i]["item_id"].ToString() == TextBox10.Text)
-        //            {
-        //                dvg.Rows[dvg.Rows.Count-2].Cells["cc"].Value = 1;
-        //              //  dvg.Rows[i].Cells["tt"].Value = (int)dvg.Rows[i].Cells["cc"].Value * (float)newtable.Rows[i]["item_prizes"];//مشكلة هنا
-        //                break;
-        //            }
-        //        }
-        //    }
-        //    else
-        //    {
-        //        for (int i = 0; i <= newtable.Rows.Count; i++)
-        //        {
-        //            if (newtable.Rows[i]["item_id"].ToString() == TextBox10.Text)
-        //            {
-        //                dvg.Rows[i].Cells["cc"].Value = +quantbox.Value;
-        //                //dvg.Rows[i].Cells["tt"].Value = (int)dvg.Rows[i].Cells["cc"].Value * (int)newtable.Rows[i]["item_prizes"];//مشكلة هنا
-
-        //                break;
-        //            }
-        //        }
-
-        //    }
-        //    for (int i =0;i<= dvg.Rows.Count;i++)
-        //    {
-        //        //totalp.Text +=dvg.Rows[i].Cells["tt"].Value;
-        //    }
-        }
+      
+  
+      
 
         private void SaleScreen_Load(object sender, EventArgs e)
         {
@@ -236,11 +153,13 @@ namespace FORMS_CS
 
         private void chose1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
+            
             if (chose1.LinkColor == System.Drawing.Color.Gray)//لضمان عدم الرجوع الي خانه غير موجوده
                 return;
             valued = date1.Text;
             valuep = Convert.ToDouble(prize1.Text);
-            Addtogrid();
+            addtogrid();
             Restchose();
         }
 
@@ -248,12 +167,15 @@ namespace FORMS_CS
         {
             if (chose2.LinkColor == System.Drawing.Color.Gray)//لضمان عدم الرجوع الي خانه غير موجوده
                 return;
-            valued = date2.Text;
+             valued = date2.Text;
              valuep = Convert.ToDouble(prize2.Text);
-            Addtogrid();
+            addtogrid();
             Restchose();
         }
 
-      
+        private void dvg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     } 

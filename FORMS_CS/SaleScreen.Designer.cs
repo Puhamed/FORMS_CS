@@ -59,6 +59,11 @@
             this.chose1 = new System.Windows.Forms.LinkLabel();
             this.last1 = new System.Windows.Forms.LinkLabel();
             this.dvg = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Panel5 = new System.Windows.Forms.Panel();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
@@ -465,6 +470,7 @@
             // 
             // dvg
             // 
+            this.dvg.AllowUserToAddRows = false;
             this.dvg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvg.BackgroundColor = System.Drawing.Color.Silver;
             this.dvg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -479,10 +485,17 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dvg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dvg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dvg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvg.Location = new System.Drawing.Point(0, 230);
             this.dvg.Margin = new System.Windows.Forms.Padding(5);
             this.dvg.Name = "dvg";
+            this.dvg.ReadOnly = true;
             this.dvg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dvg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -496,6 +509,37 @@
             this.dvg.RowHeadersVisible = false;
             this.dvg.Size = new System.Drawing.Size(779, 214);
             this.dvg.TabIndex = 2;
+            this.dvg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Panel3
             // 
@@ -823,5 +867,10 @@
         internal System.Windows.Forms.ComboBox ComboBox1;
         internal System.Windows.Forms.Label count;
         internal System.Windows.Forms.NumericUpDown quantbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

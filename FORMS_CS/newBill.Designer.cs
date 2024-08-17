@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label2 = new System.Windows.Forms.Label();
             this.Button3 = new System.Windows.Forms.Button();
@@ -39,33 +39,37 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
-            this.priceBox = new System.Windows.Forms.TextBox();
+            this.PricebBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.quantbox = new System.Windows.Forms.NumericUpDown();
-            this.senfBox = new System.Windows.Forms.TextBox();
+            this.Quantbox = new System.Windows.Forms.NumericUpDown();
+            this.Idbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
+            this.Bellbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dvg = new System.Windows.Forms.DataGridView();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namebox = new System.Windows.Forms.TextBox();
+            this.Prizesbox = new System.Windows.Forms.TextBox();
+            this.Datebox = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.kind = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quantbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Quantbox)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -127,9 +131,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.Bellbox);
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 28);
             this.panel2.Name = "panel2";
@@ -138,12 +143,18 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.Datebox);
+            this.groupBox1.Controls.Add(this.Prizesbox);
+            this.groupBox1.Controls.Add(this.Namebox);
             this.groupBox1.Controls.Add(this.panel7);
-            this.groupBox1.Controls.Add(this.priceBox);
+            this.groupBox1.Controls.Add(this.PricebBox);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.quantbox);
-            this.groupBox1.Controls.Add(this.senfBox);
+            this.groupBox1.Controls.Add(this.Quantbox);
+            this.groupBox1.Controls.Add(this.Idbox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -202,74 +213,74 @@
             this.Button4.UseVisualStyleBackColor = false;
             this.Button4.Click += new System.EventHandler(this.Button4_Click);
             // 
-            // priceBox
+            // PricebBox
             // 
-            this.priceBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.priceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.priceBox.Location = new System.Drawing.Point(233, 30);
-            this.priceBox.Margin = new System.Windows.Forms.Padding(5);
-            this.priceBox.Name = "priceBox";
-            this.priceBox.Size = new System.Drawing.Size(84, 22);
-            this.priceBox.TabIndex = 21;
+            this.PricebBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PricebBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.PricebBox.Location = new System.Drawing.Point(278, 34);
+            this.PricebBox.Margin = new System.Windows.Forms.Padding(5);
+            this.PricebBox.Name = "PricebBox";
+            this.PricebBox.Size = new System.Drawing.Size(84, 22);
+            this.PricebBox.TabIndex = 21;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(323, 32);
+            this.label7.Location = new System.Drawing.Point(177, 11);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 16);
+            this.label7.Size = new System.Drawing.Size(62, 16);
             this.label7.TabIndex = 20;
-            this.label7.Text = "سعر الوحدة";
+            this.label7.Text = "سعر البيع";
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(508, 32);
+            this.label6.Location = new System.Drawing.Point(413, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 16);
             this.label6.TabIndex = 19;
             this.label6.Text = "الكمية";
             // 
-            // quantbox
+            // Quantbox
             // 
-            this.quantbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.quantbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.quantbox.Location = new System.Drawing.Point(416, 32);
-            this.quantbox.Name = "quantbox";
-            this.quantbox.Size = new System.Drawing.Size(81, 22);
-            this.quantbox.TabIndex = 18;
+            this.Quantbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Quantbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Quantbox.Location = new System.Drawing.Point(383, 35);
+            this.Quantbox.Name = "Quantbox";
+            this.Quantbox.Size = new System.Drawing.Size(81, 22);
+            this.Quantbox.TabIndex = 18;
             // 
-            // senfBox
+            // Idbox
             // 
-            this.senfBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.senfBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.senfBox.Location = new System.Drawing.Point(584, 32);
-            this.senfBox.Margin = new System.Windows.Forms.Padding(5);
-            this.senfBox.Name = "senfBox";
-            this.senfBox.Size = new System.Drawing.Size(172, 22);
-            this.senfBox.TabIndex = 17;
+            this.Idbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Idbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Idbox.Location = new System.Drawing.Point(690, 32);
+            this.Idbox.Margin = new System.Windows.Forms.Padding(5);
+            this.Idbox.Name = "Idbox";
+            this.Idbox.Size = new System.Drawing.Size(66, 22);
+            this.Idbox.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(764, 32);
+            this.label4.Location = new System.Drawing.Point(693, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 16;
-            this.label4.Text = "اسم الصنف";
+            this.label4.Text = "رقم العنصر";
             // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(490, 18);
+            this.comboBox1.Location = new System.Drawing.Point(490, 10);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(266, 24);
             this.comboBox1.TabIndex = 9;
@@ -279,7 +290,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(760, 15);
+            this.label3.Location = new System.Drawing.Point(770, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 8;
@@ -287,9 +298,10 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.TextBox1);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.kind);
+            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.panel3.Location = new System.Drawing.Point(0, 154);
@@ -308,28 +320,28 @@
             this.button5.Location = new System.Drawing.Point(0, 0);
             this.button5.Margin = new System.Windows.Forms.Padding(5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(118, 42);
+            this.button5.Size = new System.Drawing.Size(117, 51);
             this.button5.TabIndex = 16;
             this.button5.Text = "حفظ الفاتورة";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // TextBox1
+            // Bellbox
             // 
-            this.TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.TextBox1.Location = new System.Drawing.Point(681, 9);
-            this.TextBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(82, 22);
-            this.TextBox1.TabIndex = 15;
+            this.Bellbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Bellbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Bellbox.Location = new System.Drawing.Point(614, 18);
+            this.Bellbox.Margin = new System.Windows.Forms.Padding(5);
+            this.Bellbox.Name = "Bellbox";
+            this.Bellbox.Size = new System.Drawing.Size(82, 22);
+            this.Bellbox.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(764, 7);
+            this.label1.Location = new System.Drawing.Point(716, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 7;
@@ -349,6 +361,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Silver;
+            this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -384,63 +397,126 @@
             this.dvg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dvg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.No,
-            this.senf,
-            this.price,
-            this.quant,
-            this.total});
             this.dvg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvg.Location = new System.Drawing.Point(0, 0);
             this.dvg.Margin = new System.Windows.Forms.Padding(5);
             this.dvg.Name = "dvg";
             this.dvg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dvg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvg.RowHeadersVisible = false;
             this.dvg.Size = new System.Drawing.Size(848, 253);
             this.dvg.TabIndex = 3;
             // 
-            // No
+            // Namebox
             // 
-            this.No.HeaderText = "ر.ت";
-            this.No.Name = "No";
+            this.Namebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Namebox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Namebox.Location = new System.Drawing.Point(614, 31);
+            this.Namebox.Margin = new System.Windows.Forms.Padding(5);
+            this.Namebox.Name = "Namebox";
+            this.Namebox.Size = new System.Drawing.Size(66, 22);
+            this.Namebox.TabIndex = 23;
             // 
-            // senf
+            // Prizesbox
             // 
-            this.senf.HeaderText = "الصنف";
-            this.senf.Name = "senf";
+            this.Prizesbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Prizesbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Prizesbox.Location = new System.Drawing.Point(170, 34);
+            this.Prizesbox.Margin = new System.Windows.Forms.Padding(5);
+            this.Prizesbox.Name = "Prizesbox";
+            this.Prizesbox.Size = new System.Drawing.Size(84, 22);
+            this.Prizesbox.TabIndex = 24;
             // 
-            // price
+            // Datebox
             // 
-            this.price.HeaderText = "سعر الوحدة";
-            this.price.Name = "price";
+            this.Datebox.Location = new System.Drawing.Point(490, 35);
+            this.Datebox.Name = "Datebox";
+            this.Datebox.Size = new System.Drawing.Size(106, 22);
+            this.Datebox.TabIndex = 25;
             // 
-            // quant
+            // label8
             // 
-            this.quant.HeaderText = "الكمية";
-            this.quant.Name = "quant";
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(614, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 16);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "اسم الصنف";
             // 
-            // total
+            // label9
             // 
-            this.total.HeaderText = "الإجمالي";
-            this.total.Name = "total";
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(278, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 16);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "سعر الشراء";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(521, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 16);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "التاريخ";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(3, 15);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(266, 24);
+            this.comboBox2.TabIndex = 11;
+            // 
+            // kind
+            // 
+            this.kind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kind.AutoSize = true;
+            this.kind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.kind.Location = new System.Drawing.Point(278, 18);
+            this.kind.Name = "kind";
+            this.kind.Size = new System.Drawing.Size(70, 16);
+            this.kind.TabIndex = 29;
+            this.kind.Text = "سعر الشراء";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(740, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 31);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "label11";
+            this.label11.Visible = false;
             // 
             // newBill
             // 
@@ -455,6 +531,7 @@
             this.Name = "newBill";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "newBill";
+            this.Load += new System.EventHandler(this.newBill_Load_1);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -462,7 +539,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.quantbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Quantbox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -484,27 +561,31 @@
         private System.Windows.Forms.Panel panel4;
         internal System.Windows.Forms.DataGridView dvg;
         internal System.Windows.Forms.Label label1;
-        internal System.Windows.Forms.TextBox TextBox1;
+        internal System.Windows.Forms.TextBox Bellbox;
         private System.Windows.Forms.GroupBox groupBox1;
-        internal System.Windows.Forms.TextBox senfBox;
+        internal System.Windows.Forms.TextBox Idbox;
         internal System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         internal System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         internal System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.Panel panel7;
-        internal System.Windows.Forms.TextBox priceBox;
+        internal System.Windows.Forms.TextBox PricebBox;
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.NumericUpDown quantbox;
+        internal System.Windows.Forms.NumericUpDown Quantbox;
         internal System.Windows.Forms.Button button2;
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.Button button5;
+        internal System.Windows.Forms.Label label10;
+        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker Datebox;
+        internal System.Windows.Forms.TextBox Prizesbox;
+        internal System.Windows.Forms.TextBox Namebox;
+        internal System.Windows.Forms.Label kind;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -50,8 +50,8 @@ namespace FORMS_CS
         {
             DataTable dt = new DataTable();
             Disconnect();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from suppliers",con)
-                ; sa.Fill(dt);
+            SqlDataAdapter sa = new SqlDataAdapter("select * from suppliers", con);
+                sa.Fill(dt);
             return dt;
         }
         public DataTable Data_tem(string num)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
