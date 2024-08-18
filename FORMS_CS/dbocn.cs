@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FORMS_CS
@@ -54,6 +55,22 @@ namespace FORMS_CS
                 sa.Fill(dt);
             return dt;
         }
+        public DataTable Fill_cos()//لتعبة كوبو بوكس الزبائن
+        {
+            DataTable dt = new DataTable();
+            Disconnect();
+            SqlDataAdapter sa = new SqlDataAdapter("select * from customers", con);
+            sa.Fill(dt);
+            return dt;
+        }
+        public DataTable maxinvo()//لتعبة كوبو بوكس الزبائن
+        {
+            DataTable dt = new DataTable();
+            Disconnect();
+            SqlDataAdapter sa = new SqlDataAdapter("select max id from invoice_sell", con);
+            sa.Fill(dt);
+            return dt;
+        }
         public DataTable Data_tem(string num)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
         {
         DataTable dt =new DataTable();
@@ -63,19 +80,8 @@ namespace FORMS_CS
             da.SelectCommand.Parameters.AddWithValue("@num", num);
 
             da.Fill(dt);
-            //لتحديد العنصر المختار 
-            if (dt.Rows.Count > 1)// للتحقق من انه يوجد عنصر ب الرقم المختار
-            {
-            }
-            else if (dt.Rows.Count==0)
-            {
-                MessageBox.Show("خطا في الرقم", "لا يوجد عنصر بهاذا الخطا");
-            }
-
-
-
             return dt; 
         }
-     
     }
+   
 }
