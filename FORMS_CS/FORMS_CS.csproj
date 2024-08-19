@@ -76,7 +76,9 @@
     <Compile Include="Main_form.Designer.cs">
       <DependentUpon>Main_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="newBill.cs" />
+    <Compile Include="newBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="newBill.Designer.cs">
       <DependentUpon>newBill.cs</DependentUpon>
     </Compile>
