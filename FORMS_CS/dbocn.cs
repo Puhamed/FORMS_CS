@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace FORMS_CS
@@ -63,13 +64,27 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt;
         }
-        public DataTable maxinvo()//لتعبة كوبو بوكس الزبائن
+        public DataTable Fill_invo()//لتعبة كوبو بوكس الزبائن
         {
             DataTable dt = new DataTable();
             Disconnect();
-            SqlDataAdapter sa = new SqlDataAdapter("select max id from invoice_sell", con);
+            SqlDataAdapter sa = new SqlDataAdapter("select * from invoice_sell", con);
             sa.Fill(dt);
             return dt;
+        }
+        public DataTable Fill_invo_where(string _name)//لتعبة كوبو بوكس الزبائن
+        {
+            DataTable dt = new DataTable();
+            Disconnect();
+            SqlDataAdapter sa = new SqlDataAdapter("select * from invoice_sell where invo_id = '"+ _name + "' ", con);
+            sa.Fill(dt);
+            return dt;
+        }
+        public int max_invo(DataTable dataTable,string name)
+        { 
+            int max = dataTable.AsEnumerable().Max(row => row.Field<int>(name));
+
+            return max;
         }
         public DataTable Data_tem(string num)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
         {

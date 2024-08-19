@@ -24,7 +24,7 @@ namespace FORMS_CS
         DateTime date_co;//متغير مساعد لتخزين تاريخ المختار 
         string str;
         SqlCommand cmd;
-
+        SqlDataAdapter da = new SqlDataAdapter();
         public SaleScreen()
         {
 
@@ -95,6 +95,7 @@ namespace FORMS_CS
                                 dvg.Rows[row1.Index].Cells[3].Value = Convert.ToInt32(dvg.Rows[row1.Index].Cells[3].Value) + quantbox.Value;
                             }
                             dvg.Rows[row1.Index].Cells[4].Value = Convert.ToInt32(dvg.Rows[row1.Index].Cells[3].Value) * Convert.ToInt32(dvg.Rows[row1.Index].Cells[2].Value);
+                            totalp.Text= Convert.ToInt32( dvg.Rows[row1.Index].Cells[4].Value) + totalp.Text;
                             dvg.Refresh();
                                 return;
                             }
@@ -106,6 +107,11 @@ namespace FORMS_CS
             
 
             dvg.Refresh();
+        }
+        public void Maxinvo()//اضافة فاتورة جديده
+        {
+            comboBox2.Items.Add(con.max_invo(con.Fill_invo(), "invo_id") + 1);
+            comboBox2.SelectedIndex = 0;
         }
         private void addoneitem(DataRow roww)//اضافة ليس متكرر
         {
@@ -127,6 +133,8 @@ namespace FORMS_CS
         ComboBox1.DataSource=  con.Fill_cos();
         ComboBox1.DisplayMember= "cus_name";
         ComboBox1.SelectedIndex= 0;
+            Maxinvo();
+            
         }
         private void TextBox10_KeyDown(object sender, KeyEventArgs e)
         {
@@ -207,7 +215,9 @@ namespace FORMS_CS
             dt.Rows.Clear();
            dates.Clear();
             Restchose();
-            dvg.Refresh(); 
+            dvg.Refresh();
+            comboBox2.DataSource=null;
+            Maxinvo();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -222,25 +232,61 @@ namespace FORMS_CS
            {//يحتاج الي تعديل القيمه لا تطبق
       
 
-                str = "update items set item_countity = item_countity-@sup where item_id=@id and item_prizes=@pr and item_date=@date";
+                str = "update items set item_countity = item_countity - '"+ Convert.ToInt32(dataRow.Cells[3].Value).ToString() + "' where item_id='"+ dataRow.Cells[0].Value.ToString() + "' and item_prizes='"+ dataRow.Cells[2].Value + "' and item_date=@1";
                 cmd = new SqlCommand(str, con.con);
-                cmd.Parameters.AddWithValue("@sup",Convert.ToInt32 (dataRow.Cells[3].Value));
-                cmd.Parameters.AddWithValue("@id", dataRow.Cells[0].Value);
-                cmd.Parameters.AddWithValue("@pr", dataRow.Cells[2].Value);
-                cmd.Parameters.AddWithValue("@date", dates[dataRow.Index]);
+                //cmd.Parameters.AddWithValue("@sup",Convert.ToInt32 (dataRow.Cells[3].Value));
+                //cmd.Parameters.AddWithValue("@id", dataRow.Cells[0].Value);
+                //cmd.Parameters.AddWithValue("@pr", dataRow.Cells[2].Value);
+                cmd.Parameters.AddWithValue("@1", dates[dataRow.Index]);
                 con.Connect();
                 cmd.ExecuteNonQuery();
                 con.Disconnect();
             }
         }
         private void addtoinvo()//لحفظ الفاتورة
-        {
-
+        {///يحتاج الي تعديل
+            str = "update invoice_sell set invo_id=@1 , invo_date=@2 , invo_cus=@3 , invo_total=@4";
+         cmd=new SqlCommand(str, con.con);
+            cmd.Parameters.AddWithValue("@1", comboBox2.SelectedValue);
+            cmd.Parameters.AddWithValue("@2", comboBox2.SelectedValue);
+            cmd.Parameters.AddWithValue("@3", comboBox2.SelectedValue);
+            cmd.Parameters.AddWithValue("@4", comboBox2.SelectedValue);
+            con.Connect();
+            cmd.ExecuteNonQuery();
+            con.Disconnect();
         }
         private void addtoinvodet()//لحفظ تفاصيل الفاتورة
         {
 
         }
 
+        private void comboBox2_DropDown(object sender, EventArgs e)
+        {
+            comboBox2.DataSource = con.Fill_invo();
+            comboBox2.DisplayMember = "invo_id";
+        }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void comboBox2_DropDownClosed(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedIndex == -1)
+                return;
+            str = "select * from invoice_sell_det where invo_id ='" + comboBox2.Text + "'";
+            da = new SqlDataAdapter(str, con.con);
+            dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow row in dt.Rows)
+            {
+                dvg.Rows.Add(row["item_id"], row["item_name"], row["item_countity"], row["item_prize"]);
+            }
+            dt.Rows.Clear();
+            //غيرها بعدين بالهون
+            ComboBox1.DataSource = null;
+            ComboBox1.Text = con.Fill_invo_where(comboBox2.Text).Rows[0]["invo_cus"].ToString();
+        }
     }
     } 
