@@ -124,9 +124,9 @@ namespace FORMS_CS
         private void SaleScreen_Load(object sender, EventArgs e)
         {
             senfsgridview.DataSource = con.Fillsenfs();
-        ComboBox1.DataSource=  con.Fill_cos();
+        //ComboBox1.DataSource=  con.Fill_cos();
         ComboBox1.DisplayMember= "cus_name";
-        ComboBox1.SelectedIndex= 0;
+        //ComboBox1.SelectedIndex= 0;
         }
         private void TextBox10_KeyDown(object sender, KeyEventArgs e)
         {
