@@ -130,7 +130,7 @@ namespace FORMS_CS
         private void SaleScreen_Load(object sender, EventArgs e)
         {
             senfsgridview.DataSource = con.Fillsenfs();
-        //ComboBox1.DataSource=  con.Fill_cos();
+        ComboBox1.DataSource=  con.Fill_cos();
         ComboBox1.DisplayMember= "cus_name";
         ComboBox1.SelectedIndex= 0;
             Maxinvo();
@@ -223,25 +223,50 @@ namespace FORMS_CS
         private void button9_Click(object sender, EventArgs e)
         {
             supfromitem();
-            addtoinvo();
-            addtoinvodet();
         }
         private void supfromitem()//لتنقيص عدد الكمية من قاعدة البيانات
         {
-            foreach (DataGridViewRow dataRow in dvg.Rows)
-           {//يحتاج الي تعديل القيمه لا تطبق
-      
-
-                str = "update items set item_countity = item_countity - '"+ Convert.ToInt32(dataRow.Cells[3].Value).ToString() + "' where item_id='"+ dataRow.Cells[0].Value.ToString() + "' and item_prizes='"+ dataRow.Cells[2].Value + "' and item_date=@1";
-                cmd = new SqlCommand(str, con.con);
-                //cmd.Parameters.AddWithValue("@sup",Convert.ToInt32 (dataRow.Cells[3].Value));
-                //cmd.Parameters.AddWithValue("@id", dataRow.Cells[0].Value);
-                //cmd.Parameters.AddWithValue("@pr", dataRow.Cells[2].Value);
-                cmd.Parameters.AddWithValue("@1", dates[dataRow.Index]);
-                con.Connect();
-                cmd.ExecuteNonQuery();
-                con.Disconnect();
-            }
+            // بداية المعاملة
+            str = " Update items set item_countity = 5 Where item_id = 153154";
+            da = new SqlDataAdapter(str, con.con);
+            dt = new DataTable();
+            da.Fill(dt);
+            da.Update(dt);
+            //SqlTransaction transaction = con.con.BeginTransaction();
+            //try
+            //{
+            //    foreach (DataGridViewRow dataRow in dvg.Rows)
+            //    {
+            //        string str = "UPDATE items SET item_countity = item_countity - @sup WHERE item_id = @id AND item_prizes = @pr AND item_date = @date";
+            //         cmd = new SqlCommand(str, con.con);
+            //        cmd.Transaction = transaction; // استخدم المعاملة المخزنة في متغير transaction
+            //        cmd.Parameters.AddWithValue("@sup", Convert.ToInt32(dataRow.Cells[3].Value));
+            //        cmd.Parameters.AddWithValue("@id", dataRow.Cells[0].Value.ToString());
+            //        cmd.Parameters.AddWithValue("@pr", dataRow.Cells[2].Value.ToString());
+            //        cmd.Parameters.AddWithValue("@date", dates[dataRow.Index]);
+            //        int rowsAffected = cmd.ExecuteNonQuery();
+            //        // التحقق من أن الأمر نفذ بنجاح
+            //        if (rowsAffected > 0)
+            //        {
+            //            MessageBox.Show("0000");
+            //            // الأمر نفذ بنجاح
+            //        }
+            //        else
+            //        {
+            //            // لم يتم تحديث أي صف
+            //            throw new Exception("لم يتم تنفيذ الأمر بنجاح.");
+            //        }
+            //    }
+            //    // إذا تم تنفيذ جميع الأوامر بنجاح، قم بتثبيت المعاملة
+            //    transaction.Commit();
+            //}
+            //catch (Exception ex)
+            //{
+            //    // إذا حدث خطأ، قم بإلغاء المعاملة
+            //    transaction.Rollback();
+            //    throw ex;
+            //}
+            //con.Disconnect();
         }
         private void addtoinvo()//لحفظ الفاتورة
         {///يحتاج الي تعديل
