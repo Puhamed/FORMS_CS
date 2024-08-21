@@ -44,6 +44,7 @@
             this.Button5 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -129,6 +130,7 @@
             // Panel2
             // 
             this.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(84)))), ((int)(((byte)(138)))));
+            this.Panel2.Controls.Add(this.button10);
             this.Panel2.Controls.Add(this.button9);
             this.Panel2.Controls.Add(this.Label1);
             this.Panel2.Controls.Add(this.current);
@@ -272,6 +274,23 @@
             this.Panel4.Size = new System.Drawing.Size(1250, 46);
             this.Panel4.TabIndex = 7;
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.White;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Image = global::FORMS_CS.Properties.Resources.salesscreen;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(270, 0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(140, 37);
+            this.button10.TabIndex = 8;
+            this.button10.Text = "المستخدمين";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +333,7 @@
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.Panel Panel4;
         internal System.Windows.Forms.Button button9;
+        internal System.Windows.Forms.Button button10;
     }
 }
 

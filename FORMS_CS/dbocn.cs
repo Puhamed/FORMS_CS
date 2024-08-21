@@ -10,6 +10,7 @@ namespace FORMS_CS
     public class Dbcon
     {
         public SqlConnection con;
+        public SqlDataAdapter sa;
         public Dbcon()
         {
             con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\supertmarket.mdf;Integrated Security=True");
@@ -30,12 +31,19 @@ namespace FORMS_CS
                 con.Close();
             }
         }
-        
+        public DataTable Fill_users()
+        { 
+        DataTable dt = new DataTable();
+            sa=new SqlDataAdapter("select u.user_id ,u.user_name,u.user_pass , l.level_name from users u join levels l on u.user_level = l.level_id ",con);
+            dt=new DataTable();
+            sa.Fill(dt);
+        return dt;
+        }
         public DataTable Fillsenfs()
         {
             DataTable dt = new DataTable();
            Disconnect();
-            SqlDataAdapter sa = new SqlDataAdapter("select item_name as[الأصناف] from items", con);
+             sa = new SqlDataAdapter("select item_name as[الأصناف] from items", con);
             sa.Fill(dt);
             return dt;
         }
@@ -52,15 +60,21 @@ namespace FORMS_CS
         {
             DataTable dt = new DataTable();
             Disconnect();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from suppliers", con);
+             sa = new SqlDataAdapter("select * from suppliers", con);
                 sa.Fill(dt);
+            return dt;
+        }
+        public DataTable Chose_level() // لاختيار مستوي المستخدم
+        { DataTable dt= new DataTable();
+            sa = new SqlDataAdapter("select * from levels", con);
+            sa.Fill(dt);
             return dt;
         }
         public DataTable Fill_cos()//لتعبة كوبو بوكس الزبائن
         {
             DataTable dt = new DataTable();
             Disconnect();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from customers", con);
+            sa = new SqlDataAdapter("select * from customers", con);
             sa.Fill(dt);
             return dt;
         }
@@ -68,7 +82,7 @@ namespace FORMS_CS
         {
             DataTable dt = new DataTable();
             Disconnect();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from invoice_sell", con);
+            sa = new SqlDataAdapter("select * from invoice_sell", con);
             sa.Fill(dt);
             return dt;
         }
@@ -76,7 +90,7 @@ namespace FORMS_CS
         {
             DataTable dt = new DataTable();
             Disconnect();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from invoice_sell where invo_id = '"+ _name + "' ", con);
+             sa = new SqlDataAdapter("select * from invoice_sell where invo_id = '"+ _name + "' ", con);
             sa.Fill(dt);
             return dt;
         }
@@ -91,10 +105,10 @@ namespace FORMS_CS
         DataTable dt =new DataTable();
             string str = "select * from items where item_id = @num";
 
-            SqlDataAdapter da=new SqlDataAdapter(str,con) ;
-            da.SelectCommand.Parameters.AddWithValue("@num", num);
+             sa=new SqlDataAdapter(str,con) ;
+            sa.SelectCommand.Parameters.AddWithValue("@num", num);
 
-            da.Fill(dt);
+            sa.Fill(dt);
             return dt; 
         }
     }

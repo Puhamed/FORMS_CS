@@ -105,5 +105,10 @@ namespace FORMS_CS
             }
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Users users = new Users();
+            users.Show();
+        }
     }
 }
