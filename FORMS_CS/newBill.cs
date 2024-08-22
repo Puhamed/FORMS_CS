@@ -63,7 +63,7 @@ namespace FORMS_CS
                 }
             }
         }
-        void clear()
+        void Clear()
         {
             Namebox.Clear();
             Idbox.Clear();

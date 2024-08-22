@@ -35,7 +35,6 @@ namespace FORMS_CS
         { 
         DataTable dt = new DataTable();
             sa=new SqlDataAdapter("select u.user_id ,u.user_name,u.user_pass , l.level_name from users u join levels l on u.user_level = l.level_id ",con);
-            dt=new DataTable();
             sa.Fill(dt);
         return dt;
         }
@@ -94,11 +93,19 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt;
         }
-        public int max_invo(DataTable dataTable,string name)
+        public int Max_invo(DataTable dataTable,string name)
         { 
             int max = dataTable.AsEnumerable().Max(row => row.Field<int>(name));
 
             return max;
+        }
+        public DataTable Fill_hes(int user)
+        { 
+        DataTable dt=new DataTable();
+            sa = new SqlDataAdapter("SELECT h.hes_id, u.user_name, k.kind_name, h.hes_date FROM hestory h JOIN kind_hes k ON h.hes_kind = k.kind_id JOIN users u ON h.hes_actor = u.user_id WHERE h.hes_actor =@id ", con);
+            sa.SelectCommand.Parameters.AddWithValue("@id", user);
+            sa.Fill(dt);
+            return dt;
         }
         public DataTable Data_tem(string num)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
         {

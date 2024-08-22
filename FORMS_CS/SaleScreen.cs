@@ -71,7 +71,7 @@ namespace FORMS_CS
 
             last1.LinkColor = i == 2 ? System.Drawing.Color.Gray : System.Drawing.Color.Blue;
         }
-        public void addtogrid()//اضافة العنصر الي الداتا جريد فيو
+        public void Addtogrid()//اضافة العنصر الي الداتا جريد فيو
         {
              date_co = Convert.ToDateTime(valued);
      
@@ -100,7 +100,7 @@ namespace FORMS_CS
                                 return;
                             }
                         }
-                    addoneitem(row);
+                    Addoneitem(row);
                     break;
                     }
                 }
@@ -110,10 +110,10 @@ namespace FORMS_CS
         }
         public void Maxinvo()//اضافة فاتورة جديده
         {
-            comboBox2.Items.Add(con.max_invo(con.Fill_invo(), "invo_id") + 1);
+            comboBox2.Items.Add(con.Max_invo(con.Fill_invo(), "invo_id") + 1);
             comboBox2.SelectedIndex = 0;
         }
-        private void addoneitem(DataRow roww)//اضافة ليس متكرر
+        private void Addoneitem(DataRow roww)//اضافة ليس متكرر
         {
             if (quantbox.Value == 1)
             {
@@ -153,7 +153,7 @@ namespace FORMS_CS
                         Chose();
                     }
                     else
-                    addoneitem(dt.Rows[0]);
+                    Addoneitem(dt.Rows[0]);
 
                 }
             
@@ -186,7 +186,7 @@ namespace FORMS_CS
                 return;
             valued = date1.Text;
             valuep = Convert.ToDouble(prize1.Text);
-            addtogrid();
+            Addtogrid();
             Restchose();
         }
 
@@ -196,7 +196,7 @@ namespace FORMS_CS
                 return;
              valued = date2.Text;
              valuep = Convert.ToDouble(prize2.Text);
-            addtogrid();
+            Addtogrid();
             Restchose();
         }
 
