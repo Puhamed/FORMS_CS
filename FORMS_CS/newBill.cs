@@ -13,12 +13,15 @@ namespace FORMS_CS
 {
     public partial class newBill : Form
 
+        
     {
+        
         int count = 0;
-        readonly Dbcon Li = new Dbcon();
+        readonly dbcon Li = new dbcon();
         DataTable dt = new DataTable();
         DataTable items = new DataTable();
         SqlDataAdapter da = new SqlDataAdapter();
+        dbcon con = new dbcon();
         string str;
         public void Empty()
         {
@@ -113,6 +116,22 @@ namespace FORMS_CS
                 dvg.Rows.Add(++count, Idbox.Text, Namebox.Text, Datebox.Text, PricebBox.Text, Quantbox.Value, Prizesbox.Text, Convert.ToDouble(PricebBox.Text) * Convert.ToDouble(Quantbox.Value), "حذف");
             }
             Quantbox.Value = 1;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+                for (int i = 0; i < dvg.Rows.Count; i++)
+                {
+                    con.add_newItems(Bellbox.Text, dvg.Rows[i].Cells[2].Value.ToString(), dvg.Rows[i].Cells[4].Value.ToString(), dvg.Rows[i].Cells[3].Value.ToString(), dvg.Rows[i].Cells[5].Value.ToString(),comboBox1.Text, totalBox.Text, dvg.Rows[i].Cells[1].Value.ToString());
+                MessageBox.Show("تمت عملية إدراج الفاتورة بنجاح","تم الحفظ",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }       
+                
+        }
+
+        private void newBill_Load(object sender, EventArgs e)
+        {
+            Bellbox.Text = con.top().Rows[0][0].ToString();
         }
     }
 }

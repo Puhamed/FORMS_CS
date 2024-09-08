@@ -15,7 +15,7 @@ namespace FORMS_CS
 {
     public partial class SaleScreen : Form
     {
-        readonly Dbcon con = new Dbcon();
+        readonly dbcon con = new dbcon();
         int i = 2;// متغير مساعد ل تحديد عدد العناصر المكرره يستخدم في دالة chose
         string valued;//متغير مساعد ل حفظ قيمة التاريخ في حالة تكرار العناصر
         double valuep;//متغير مساعد لحفظ قيمة السعر في حالة تكرار العناصر
@@ -130,9 +130,9 @@ namespace FORMS_CS
         private void SaleScreen_Load(object sender, EventArgs e)
         {
             senfsgridview.DataSource = con.Fillsenfs();
-        ComboBox1.DataSource=  con.Fill_cos();
-        ComboBox1.DisplayMember= "cus_name";
-        ComboBox1.SelectedIndex= 0;
+            ComboBox1.DataSource=  con.Fill_cos();
+            ComboBox1.DisplayMember= "cus_name";
+            ComboBox1.SelectedIndex= 0;
             Maxinvo();
             
         }
@@ -276,9 +276,9 @@ namespace FORMS_CS
             cmd.Parameters.AddWithValue("@2", comboBox2.SelectedValue);
             cmd.Parameters.AddWithValue("@3", comboBox2.SelectedValue);
             cmd.Parameters.AddWithValue("@4", comboBox2.SelectedValue);
-            con.Connect();
+            con.connect();
             cmd.ExecuteNonQuery();
-            con.Disconnect();
+            con.disconnect();
         }
         private void addtoinvodet()//لحفظ تفاصيل الفاتورة
         {

@@ -9,6 +9,7 @@ namespace FORMS_CS
         bool maxmin = false;
        readonly SaleScreen Sc = new SaleScreen();
      readonly   Store st = new Store();
+        Settings set = new Settings();  
         // دالة عرض الفورمات داخل الفورم الرئيسي
         void Forms(Form pr)
         {
@@ -71,7 +72,7 @@ namespace FORMS_CS
 
         private void Button7_Click(object sender, EventArgs e)
         {
-
+            Forms(set);
         }
 
         private void button9_Click(object sender, EventArgs e)
