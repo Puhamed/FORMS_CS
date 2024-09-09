@@ -15,8 +15,10 @@ namespace FORMS_CS
         public SqlDataAdapter sa;
         public dbcon()
         {
-            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\supertmarket.mdf;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=DESKTOP-87ALT6I\SQLEXPRESs;Initial Catalog=supertmarket;Integrated Security=True;Encrypt=False;");
         }
+        // جهاز العمل Data Source=DESKTOP-87ALT6I\SQLEXPRESs;Initial Catalog=supertmarket;Integrated Security=True;Encrypt=False;Trust Server Certificate=True
+        // قاعدة بيانات محلية Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\supertmarket.mdf;Integrated Security=True
         public SqlConnection connect()
         {
             if (con.State ==  ConnectionState.Closed == true)
@@ -119,16 +121,36 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt; 
         }
-        public void add_newItems(string id, string it_name , string it_price ,string it_exdate, string it_quant,string sup, string total,string code )
+        public DataTable getcode(string name)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
+        {
+            DataTable dt = new DataTable();
+            string str = "select item_id from items where item_name = @name";
+            sa = new SqlDataAdapter(str, con);
+            sa.SelectCommand.Parameters.AddWithValue("@name", name);
+            sa.Fill(dt);
+            return dt;
+        }
+        public DataTable storeView()//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
+        {
+            DataTable dt = new DataTable();
+            string str = "select item_id as[كود الصنف], item_name as [الصنف],item_prizes as [سعر الشراء], item_date as [تاريخ انتهاء الصلاحية],item_countity as [الكمية] , item_kind as [النوع]  from items";
+            sa = new SqlDataAdapter(str, con);
+            sa.Fill(dt);
+            return dt;
+        }
+        public void add_newItems(string id, string it_name , string it_price ,string it_exdate, string it_quant,string sup, string total,string code, string buyprice )
         {
             disconnect();
-            string command = "INSERT INTO invoice_det (invo_id,item_name,item_prize,item_date,item_countity,item_code)VALUES('"+ id + "', '"+ it_name + "','"+ it_price + "', '"+ it_exdate + "','"+ it_quant + "','"+ code +"')";
+            string command = "INSERT INTO invoice_det (invo_id,item_name,item_prize,item_date,item_countity,item_code,item_buy)VALUES('"+ id + "', N'"+ it_name + "','"+ it_price + "', '"+ it_exdate + "','"+ it_quant + "','"+ code +"','"+ buyprice + "')";
             SqlCommand cmd = new SqlCommand(command, connect());
-            cmd.ExecuteNonQuery();
             disconnect();
-            string command2 = "INSERT INTO invoice [item_date],[item_sup],[item_total])VALUES( '" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + sup + "', '" + total + "')";
+            string command2 = "INSERT INTO invoice ([invo_id],[invo_date],[invo_sup],[invo_total])VALUES('"+ id +"', '" + DateTime.Now.ToString("yyyy-MM-dd") + "',N'" + sup + "', '" + total + "')";
             SqlCommand cmd2 = new SqlCommand(command2, connect());
+            disconnect();
+            string command3 = "insert into items (item_id,item_name,item_date,item_countity,item_prizes,item_prizeb) SELECT  [item_code],[item_name],[item_date],[item_countity],[item_prize],[item_buy]  FROM invoice_det where item_code = '"+ code + "' ";
+            SqlCommand cmd3 = new SqlCommand(command2, connect());
             cmd2.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             disconnect();
         }
         public void login(string date, string n)

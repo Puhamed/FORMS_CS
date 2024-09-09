@@ -179,6 +179,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Content Include="Resources\320140.png" />
+    <Content Include="Resources\add-1-icon--flatastic-1-iconset--custom-icon-design-0.png" />
     <Content Include="Resources\attentionRed.png" />
     <Content Include="Resources\back.png" />
     <Content Include="Resources\correctmark.png" />

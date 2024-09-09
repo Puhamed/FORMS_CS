@@ -132,8 +132,8 @@ namespace FORMS_CS
             senfsgridview.DataSource = con.Fillsenfs();
             ComboBox1.DataSource=  con.Fill_cos();
             ComboBox1.DisplayMember= "cus_name";
-            ComboBox1.SelectedIndex= 0;
-            Maxinvo();
+
+         
             
         }
         private void TextBox10_KeyDown(object sender, KeyEventArgs e)
@@ -312,6 +312,18 @@ namespace FORMS_CS
             //غيرها بعدين بالهون
             ComboBox1.DataSource = null;
             ComboBox1.Text = con.Fill_invo_where(comboBox2.Text).Rows[0]["invo_cus"].ToString();
+        }
+
+        private void senfsgridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            quantbox.Value = 1;
+            dt = con.Data_tem(senfsgridview.Rows[e.RowIndex].Cells[0].Value.ToString());
+            if (dt.Rows.Count > 1)// للتحقق من انه العنصر مخزن اكثر من مره
+            {
+                Chose();
+            }
+            else
+                Addoneitem(dt.Rows[0]);
         }
     }
     } 

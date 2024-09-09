@@ -357,6 +357,7 @@
             this.senfsgridview.ShowRowErrors = false;
             this.senfsgridview.Size = new System.Drawing.Size(165, 373);
             this.senfsgridview.TabIndex = 8;
+            this.senfsgridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.senfsgridview_CellClick);
             // 
             // TextBox10
             // 
