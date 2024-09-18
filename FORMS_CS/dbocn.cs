@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -98,12 +99,12 @@ namespace FORMS_CS
             return dt;
         }
 
-        public int Max_invo(DataTable dataTable,string name)
+       /* public int Max_invo(DataTable dataTable,string name)
         { 
             int max = dataTable.AsEnumerable().Max(row => row.Field<int>(name));
 
             return max;
-        }
+        }*/
         public DataTable Fill_hes(int user)
         { 
         DataTable dt=new DataTable();
@@ -138,6 +139,14 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt;
         }
+        public DataTable getItemName(string id)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
+        {
+            DataTable dt = new DataTable();
+            string str = "select item_name from items where item_id = '"+ id +"' ";
+            sa = new SqlDataAdapter(str, con);
+            sa.Fill(dt);
+            return dt;
+        }
         public void add_newItems(string id, string it_name , string it_price ,string it_exdate, string it_quant,string sup, string total,string code, string buyprice )
         {
             disconnect();
@@ -147,10 +156,11 @@ namespace FORMS_CS
             string command2 = "INSERT INTO invoice ([invo_id],[invo_date],[invo_sup],[invo_total])VALUES('"+ id +"', '" + DateTime.Now.ToString("yyyy-MM-dd") + "',N'" + sup + "', '" + total + "')";
             SqlCommand cmd2 = new SqlCommand(command2, connect());
             disconnect();
-            string command3 = "insert into items (item_id,item_name,item_date,item_countity,item_prizes,item_prizeb) SELECT  [item_code],[item_name],[item_date],[item_countity],[item_prize],[item_buy]  FROM invoice_det where item_code = '"+ code + "' ";
-            SqlCommand cmd3 = new SqlCommand(command2, connect());
+            string command3 = "insert into items(invo_id, item_id, item_name, item_date, item_countity, item_prizes, item_prizeb) SELECT[invo_id],[item_code],[item_name],[item_date],[item_countity],[item_prize],[item_buy] FROM invoice_det where item_code = '"+ code + "' and invo_id ='"+ id +"'";
+            SqlCommand cmd3 = new SqlCommand(command3, connect());
             cmd2.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
+            cmd3.ExecuteNonQuery();
             disconnect();
         }
         public void login(string date, string n)
@@ -171,6 +181,7 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt;
         }
+        
     }
    
 }

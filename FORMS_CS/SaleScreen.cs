@@ -110,8 +110,8 @@ namespace FORMS_CS
         }
         public void Maxinvo()//اضافة فاتورة جديده
         {
-            comboBox2.Items.Add(con.Max_invo(con.Fill_invo(), "invo_id") + 1);
-            comboBox2.SelectedIndex = 0;
+          //  comboBox2.Items.Add(con.Max_invo(con.Fill_invo(), "invo_id") + 1);
+           // comboBox2.SelectedIndex = 0;
         }
         private void Addoneitem(DataRow roww)//اضافة ليس متكرر
         {
@@ -132,9 +132,6 @@ namespace FORMS_CS
             senfsgridview.DataSource = con.Fillsenfs();
             ComboBox1.DataSource=  con.Fill_cos();
             ComboBox1.DisplayMember= "cus_name";
-
-         
-            
         }
         private void TextBox10_KeyDown(object sender, KeyEventArgs e)
         {
@@ -324,6 +321,16 @@ namespace FORMS_CS
             }
             else
                 Addoneitem(dt.Rows[0]);
+        }
+
+        private void Panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TextBox10_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     } 

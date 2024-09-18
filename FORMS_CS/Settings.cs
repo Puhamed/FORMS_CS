@@ -83,5 +83,18 @@ namespace FORMS_CS
         {
 
         }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.FromArgb(197, 225, 244);
+
+
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = SystemColors.ControlLightLight;
+
+        }
     }
 }

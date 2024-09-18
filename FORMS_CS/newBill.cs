@@ -8,15 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FORMS_CS
 {
     public partial class newBill : Form
-
-        
-    {
        
         
+    {
+        messageForm msf = new messageForm();
+        tools tls = new tools();
         int count = 0;
         readonly dbcon Li = new dbcon();
         DataTable dt = new DataTable();
@@ -104,54 +105,63 @@ namespace FORMS_CS
         private void Button4_Click(object sender, EventArgs e)
         {
             bool found = false;
-            if (dvg.Rows.Count > 0)
+            if (PricebBox.Text == "" || Prizesbox.Text == "" || Quantbox.Value < 1 || Namebox.Text == "" || Idbox.Text == "")
             {
-                try
-                {
-                    foreach (DataGridViewRow row in dvg.Rows)
-                    {
-                        if (row.Cells[1].Value.ToString() == Idbox.Text && Datebox.Text == row.Cells[3].Value.ToString())
-                        {
-                            dvg.AllowUserToAddRows = false;
-                            row.Cells[5].Value = Convert.ToUInt16(row.Cells[5].Value) + Quantbox.Value;
-                            row.Cells[7].Value = Convert.ToDouble(row.Cells[4].Value) * Convert.ToDouble(row.Cells[5].Value);
-                            totalBox.Text =SumColumn(dvg, 7).ToString();
-                            found = true;
-                        }
-                    }
-                    if (!found)
-                    {
-                        dvg.Rows.Add(++count, Idbox.Text, Namebox.Text, Datebox.Text, PricebBox.Text, Quantbox.Value, Prizesbox.Text, Convert.ToDouble(PricebBox.Text) * Convert.ToDouble(Quantbox.Value), "حذف");
-                        totalBox.Text = SumColumn(dvg, 7).ToString();
-                        Clear();
-                    }
-                }
-                catch
-                {
-                    return;
-                }
+                tls.messageOK("إدخال خاطئ", "يرجى إدخال قيم جميع الحقول من أجل المتابعة!!", 1);
             }
             else
             {
-                dvg.Rows.Add(++count, Idbox.Text, Namebox.Text, Datebox.Text, PricebBox.Text, Quantbox.Value, Prizesbox.Text, Convert.ToDouble(PricebBox.Text) * Convert.ToDouble(Quantbox.Value), "حذف");
-                totalBox.Text = SumColumn(dvg, 7).ToString();
-                Clear();
+                if (dvg.Rows.Count > 0)
+                {
+                    try
+                    {
+                        foreach (DataGridViewRow row in dvg.Rows)
+                        {
+                            if (row.Cells[1].Value.ToString() == Idbox.Text && Datebox.Text == row.Cells[3].Value.ToString())
+                            {
+                                dvg.AllowUserToAddRows = false;
+                                row.Cells[5].Value = Convert.ToUInt16(row.Cells[5].Value) + Quantbox.Value;
+                                row.Cells[7].Value = Convert.ToDouble(row.Cells[4].Value) * Convert.ToDouble(row.Cells[5].Value);
+                                totalBox.Text = SumColumn(dvg, 7).ToString();
+                                found = true;
+                            }
+                        }
+                        if (!found)
+                        {
+                            dvg.Rows.Add(++count, Idbox.Text, Namebox.Text, Datebox.Text, PricebBox.Text, Quantbox.Value, Prizesbox.Text, Convert.ToDouble(PricebBox.Text) * Convert.ToDouble(Quantbox.Value), "حذف");
+                            totalBox.Text = SumColumn(dvg, 7).ToString();
+                            Clear();
+                        }
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    dvg.Rows.Add(++count, Idbox.Text, Namebox.Text, Datebox.Text, PricebBox.Text, Quantbox.Value, Prizesbox.Text, Convert.ToDouble(PricebBox.Text) * Convert.ToDouble(Quantbox.Value), "حذف");
+                    totalBox.Text = SumColumn(dvg, 7).ToString();
+                    Clear();
+                }
+                Quantbox.Value = 1;
             }
-            Quantbox.Value = 1;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+
+        
             //تشطيب
-                for (int i = 0; i < dvg.Rows.Count; i++)
+            for (int i = 0; i < dvg.Rows.Count; i++)
                 {
                     con.add_newItems(Bellbox.Text, dvg.Rows[i].Cells[2].Value.ToString(), dvg.Rows[i].Cells[4].Value.ToString(), dvg.Rows[i].Cells[3].Value.ToString(), dvg.Rows[i].Cells[5].Value.ToString(),comboBox1.Text, totalBox.Text, dvg.Rows[i].Cells[1].Value.ToString(), dvg.Rows[i].Cells[6].Value.ToString());
-                dvg.Rows.Clear();
-                Bellbox.Text = con.top().Rows[0][0].ToString();
+                    Bellbox.Text = con.top().Rows[0][0].ToString();
                 }
-                MessageBox.Show("تمت عملية إدراج الفاتورة بنجاح", "تم الحفظ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+            dvg.Rows.Clear();
+            tls.messageOK("تم الحفظ", "تم إدراج الفاتورة بنجاح",0);
+            
+        
         }
 
         private void newBill_Load(object sender, EventArgs e)
@@ -212,6 +222,29 @@ namespace FORMS_CS
                 this.Hide();
             }
         }
+
+        private void Idbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (Idbox.Text == "" || Idbox.Text == null)
+                {
+                    tls.messageOK(" باركود", "لرجاء ادخال باركود",1);
+                }
+                else
+                {
+                   if (con.getItemName(Idbox.Text).Rows.Count < 1)
+                    {
+                        tls.messageOK("باركود غير معروف", "  لا يوجد عنصر مدخل بهذا الكود ", 1);
+                        return;
+                    }
+                    else
+                    {
+                        Namebox.Text = con.getItemName(Idbox.Text).Rows[0][0].ToString();
+                    }
+                }
+
+            }
+        }
     }
 }
-

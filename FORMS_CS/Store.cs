@@ -52,11 +52,30 @@ namespace FORMS_CS
         // دالة لحفظ التغييرات عن طريق البتون 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView1.Columns[7].Index)
+            try
             {
-                int rowIndex = e.RowIndex;
-                DataGridViewRow row = dataGridView1.Rows[rowIndex];
-               // UpdateDatabase(row);
+                if (e.ColumnIndex == dataGridView1.Columns[7].Index)
+                {
+                    int rowIndex = e.RowIndex;
+                    DataGridViewRow row = dataGridView1.Rows[rowIndex];
+                    // UpdateDatabase(row);
+                }
+            }
+            catch
+            {
+                return ;
+            }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            if (panel5.Visible == false)
+            {
+                panel5.Visible = true;
+            }
+            else
+            {
+                panel5.Visible=false;
             }
         }
     }
