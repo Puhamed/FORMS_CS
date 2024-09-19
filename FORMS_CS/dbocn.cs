@@ -90,6 +90,14 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt;
         }
+        public DataTable viewcategories()//لتعبة كوبو بوكس الزبائن
+        {
+            DataTable dt = new DataTable();
+            disconnect();
+            sa = new SqlDataAdapter("select cat_name as [اسم الفئة] from categories", con);
+            sa.Fill(dt);
+            return dt;
+        }
         public DataTable Fill_invo_where(string _name)//لتعبة كوبو بوكس الزبائن
         {
             DataTable dt = new DataTable();
@@ -162,6 +170,38 @@ namespace FORMS_CS
             cmd.ExecuteNonQuery();
             cmd3.ExecuteNonQuery();
             disconnect();
+        }
+        public void add_cat(string cat, string exp)
+        {
+            disconnect();
+            string command = "INSERT INTO categories (cat_name, under_exp)VALUES('" + cat + "', N'" + exp + "')";
+            SqlCommand cmd = new SqlCommand(command, connect());
+            cmd.ExecuteNonQuery();
+            disconnect();
+        }
+        // المفروض يكون التعديل حسب الـID
+        public void update_cat(string cat, string exp, string sel)
+        {
+            disconnect();
+            string command = "update categories set cat_name= '" + cat + "', under_exp ='" + exp + "' where cat_name = '" + sel +"'";
+            SqlCommand cmd = new SqlCommand(command, connect());
+            cmd.ExecuteNonQuery();
+            disconnect();
+        }
+        public void del_cat(string cat, string sel)
+        {
+            disconnect();
+            string command = "delete from categories where cat_name = '" + sel + "'";
+            SqlCommand cmd = new SqlCommand(command, connect());
+            cmd.ExecuteNonQuery();
+            disconnect();
+        }
+        public DataTable getcat()
+        {
+            DataTable dt = new DataTable();
+            sa = new SqlDataAdapter("SELECT * from categories ", con);
+            sa.Fill(dt);
+            return dt;
         }
         public void login(string date, string n)
         {

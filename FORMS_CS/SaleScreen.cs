@@ -137,22 +137,26 @@ namespace FORMS_CS
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (TextBox10.Text == ""|| TextBox10.Text == null)
+                try
                 {
-                    MessageBox.Show(" باركود", "لرجاء ادخال باركود");
-                }
-                else
-                {
-                    quantbox.Value = 1;
-                    dt = con.Data_tem(TextBox10.Text);
-                    if (dt.Rows.Count > 1)// للتحقق من انه العنصر مخزن اكثر من مره
+                    if (TextBox10.Text == "" || TextBox10.Text == null)
                     {
-                        Chose();
+                        MessageBox.Show(" باركود", "لرجاء ادخال باركود");
                     }
                     else
-                    Addoneitem(dt.Rows[0]);
+                    {
+                        quantbox.Value = 1;
+                        dt = con.Data_tem(TextBox10.Text);
+                        if (dt.Rows.Count > 1)// للتحقق من انه العنصر مخزن اكثر من مره
+                        {
+                            Chose();
+                        }
+                        else
+                            Addoneitem(dt.Rows[0]);
 
+                    }
                 }
+                catch { return; }
             
             }
         }

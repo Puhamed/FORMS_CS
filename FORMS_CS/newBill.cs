@@ -128,7 +128,7 @@ namespace FORMS_CS
                         }
                         if (!found)
                         {
-                            dvg.Rows.Add(++count, Idbox.Text, Namebox.Text, Datebox.Text, PricebBox.Text, Quantbox.Value, Prizesbox.Text, Convert.ToDouble(PricebBox.Text) * Convert.ToDouble(Quantbox.Value), "حذف");
+                            dvg.Rows.Add(++count, Idbox.Text, Namebox.Text, Datebox.Text, PricebBox.Text, Quantbox.Value, Prizesbox.Text, Convert.ToDouble(PricebBox.Text) * Convert.ToDouble(Quantbox.Value), comboBox2.Text, "حذف");
                             totalBox.Text = SumColumn(dvg, 7).ToString();
                             Clear();
                         }
@@ -167,6 +167,9 @@ namespace FORMS_CS
         private void newBill_Load(object sender, EventArgs e)
         {
             Bellbox.Text = con.top().Rows[0][0].ToString();
+            comboBox2.DataSource = con.getcat();
+            comboBox2.DisplayMember = "cat_Name";
+            comboBox2.ValueMember = "id";
             comboBox1.Focus();
         }
 
@@ -245,6 +248,11 @@ namespace FORMS_CS
                 }
 
             }
+        }
+
+        private void dvg_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

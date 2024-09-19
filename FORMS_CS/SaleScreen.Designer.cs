@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel6 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -52,6 +53,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.TextBox10 = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.Panel9 = new System.Windows.Forms.Panel();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.senfsgridview = new System.Windows.Forms.DataGridView();
@@ -59,11 +62,6 @@
             this.chose1 = new System.Windows.Forms.LinkLabel();
             this.last1 = new System.Windows.Forms.LinkLabel();
             this.dvg = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Panel5 = new System.Windows.Forms.Panel();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
@@ -86,14 +84,19 @@
             this.Label5 = new System.Windows.Forms.Label();
             this.Panel12 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel6.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.Panel8.SuspendLayout();
             this.Panel7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Panel2.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.senfsgridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvg)).BeginInit();
@@ -106,7 +109,6 @@
             this.Panel14.SuspendLayout();
             this.Panel13.SuspendLayout();
             this.Panel12.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel6
@@ -345,6 +347,26 @@
             this.TextBox10.TextChanged += new System.EventHandler(this.TextBox10_TextChanged);
             this.TextBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox10_KeyDown);
             // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.label7);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 45);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(166, 31);
+            this.panel15.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label7.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(85, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 31);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "رمز المنتج  ";
+            // 
             // Panel9
             // 
             this.Panel9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -357,6 +379,7 @@
             // 
             this.Panel4.Controls.Add(this.senfsgridview);
             this.Panel4.Controls.Add(this.textBox2);
+            this.Panel4.Controls.Add(this.comboBox3);
             this.Panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.Panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Panel4.Location = new System.Drawing.Point(166, 0);
@@ -396,7 +419,7 @@
             this.senfsgridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.senfsgridview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.senfsgridview.EnableHeadersVisualStyles = false;
-            this.senfsgridview.Location = new System.Drawing.Point(0, 26);
+            this.senfsgridview.Location = new System.Drawing.Point(0, 59);
             this.senfsgridview.Margin = new System.Windows.Forms.Padding(5);
             this.senfsgridview.MultiSelect = false;
             this.senfsgridview.Name = "senfsgridview";
@@ -416,14 +439,14 @@
             this.senfsgridview.ShowCellToolTips = false;
             this.senfsgridview.ShowEditingIcon = false;
             this.senfsgridview.ShowRowErrors = false;
-            this.senfsgridview.Size = new System.Drawing.Size(182, 505);
+            this.senfsgridview.Size = new System.Drawing.Size(182, 472);
             this.senfsgridview.TabIndex = 10;
             // 
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Location = new System.Drawing.Point(0, 33);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(182, 26);
             this.textBox2.TabIndex = 0;
@@ -464,7 +487,7 @@
             this.dvg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Khaki;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
@@ -477,51 +500,40 @@
             this.Column3,
             this.Column4,
             this.Column5});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Omar", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvg.DefaultCellStyle = dataGridViewCellStyle5;
             this.dvg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvg.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dvg.Location = new System.Drawing.Point(0, 230);
             this.dvg.Margin = new System.Windows.Forms.Padding(5);
+            this.dvg.MultiSelect = false;
             this.dvg.Name = "dvg";
             this.dvg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dvg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dvg.RowHeadersVisible = false;
+            this.dvg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dvg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvg.ShowCellErrors = false;
+            this.dvg.ShowCellToolTips = false;
+            this.dvg.ShowEditingIcon = false;
+            this.dvg.ShowRowErrors = false;
             this.dvg.Size = new System.Drawing.Size(865, 301);
             this.dvg.TabIndex = 2;
             this.dvg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Column5";
-            this.Column5.Name = "Column5";
             // 
             // Panel3
             // 
@@ -769,25 +781,40 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // panel15
+            // comboBox3
             // 
-            this.panel15.Controls.Add(this.label7);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 45);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(166, 31);
-            this.panel15.TabIndex = 12;
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox3.Font = new System.Drawing.Font("Omar", 9F, System.Drawing.FontStyle.Bold);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(0, 0);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(182, 33);
+            this.comboBox3.TabIndex = 19;
             // 
-            // label7
+            // Column5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label7.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(85, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 31);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "رمز المنتج  ";
+            this.Column5.HeaderText = "الإجمالي";
+            this.Column5.Name = "Column5";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "الكمية";
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "سعر الوحدة";
+            this.Column3.Name = "Column3";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "اسم الصنف";
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "كود الصنف";
+            this.Column1.Name = "Column1";
             // 
             // SaleScreen
             // 
@@ -812,6 +839,8 @@
             this.groupBox2.PerformLayout();
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.Panel4.ResumeLayout(false);
             this.Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.senfsgridview)).EndInit();
@@ -829,8 +858,6 @@
             this.Panel13.PerformLayout();
             this.Panel12.ResumeLayout(false);
             this.Panel12.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -876,11 +903,6 @@
         internal System.Windows.Forms.ComboBox ComboBox1;
         internal System.Windows.Forms.Label count;
         internal System.Windows.Forms.NumericUpDown quantbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         internal System.Windows.Forms.Button button9;
         internal System.Windows.Forms.ComboBox comboBox2;
         internal System.Windows.Forms.TextBox TextBox10;
@@ -891,5 +913,11 @@
         internal System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

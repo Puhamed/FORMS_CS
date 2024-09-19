@@ -78,5 +78,11 @@ namespace FORMS_CS
                 panel5.Visible=false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CategortiesForm cat = new CategortiesForm();
+            cat.ShowDialog();
+        }
     }
 }

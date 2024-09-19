@@ -16,5 +16,19 @@ namespace FORMS_CS
         {
             InitializeComponent();
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files (*.jpg, *.jpeg, *.png, *.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+            ofd.Title = "Select a Picture File";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = ofd.FileName;
+                pictureBox1.Image = Image.FromFile(filePath);
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+        }
     }
 }

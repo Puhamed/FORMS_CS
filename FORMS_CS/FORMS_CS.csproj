@@ -120,11 +120,11 @@
     <Compile Include="Store.Designer.cs">
       <DependentUpon>Store.cs</DependentUpon>
     </Compile>
-    <Compile Include="Store_Form.cs">
+    <Compile Include="CategortiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Store_Form.Designer.cs">
-      <DependentUpon>Store_Form.cs</DependentUpon>
+    <Compile Include="CategortiesForm.Designer.cs">
+      <DependentUpon>CategortiesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="supertmarketDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -149,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bills.resx">
       <DependentUpon>Bills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategortiesForm.resx">
+      <DependentUpon>CategortiesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -199,10 +202,13 @@
     </Compile>
     <Content Include="Resources\320140.png" />
     <Content Include="Resources\add-1-icon--flatastic-1-iconset--custom-icon-design-0.png" />
+    <Content Include="Resources\add20.png" />
     <Content Include="Resources\attentionRed.png" />
     <Content Include="Resources\back.png" />
     <Content Include="Resources\backup.png" />
     <Content Include="Resources\correctmark.png" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\edit20.png" />
     <Content Include="Resources\labs.png" />
     <Content Include="Resources\lock.png" />
     <Content Include="Resources\logOUT.png" />
