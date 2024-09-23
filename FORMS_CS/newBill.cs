@@ -155,8 +155,8 @@ namespace FORMS_CS
             //تشطيب
             for (int i = 0; i < dvg.Rows.Count; i++)
                 {
-                    con.add_newItems(Bellbox.Text, dvg.Rows[i].Cells[2].Value.ToString(), dvg.Rows[i].Cells[4].Value.ToString(), dvg.Rows[i].Cells[3].Value.ToString(), dvg.Rows[i].Cells[5].Value.ToString(),comboBox1.Text, totalBox.Text, dvg.Rows[i].Cells[1].Value.ToString(), dvg.Rows[i].Cells[6].Value.ToString());
-                    Bellbox.Text = con.top().Rows[0][0].ToString();
+                    con.add_newItems(Bellbox.Text, dvg.Rows[i].Cells[2].Value.ToString(), dvg.Rows[i].Cells[4].Value.ToString(), dvg.Rows[i].Cells[3].Value.ToString(), dvg.Rows[i].Cells[5].Value.ToString(),comboBox1.Text, totalBox.Text, dvg.Rows[i].Cells[1].Value.ToString(), dvg.Rows[i].Cells[6].Value.ToString(), dvg.Rows[i].Cells[7].Value.ToString());
+                    load();
                 }
             dvg.Rows.Clear();
             tls.messageOK("تم الحفظ", "تم إدراج الفاتورة بنجاح",0);
@@ -165,6 +165,10 @@ namespace FORMS_CS
         }
 
         private void newBill_Load(object sender, EventArgs e)
+        {
+            load();
+        }
+        void load()
         {
             Bellbox.Text = con.top().Rows[0][0].ToString();
             comboBox2.DataSource = con.getcat();
@@ -202,9 +206,10 @@ namespace FORMS_CS
 
         private void newBill_KeyDown(object sender, KeyEventArgs e)
         {
-            /*if(panel2.Enabled== true || )
+            /*
+            if(panel2.Enabled== true || )
             if (e.KeyCode == Keys.Enter)
-        */
+            */
         }
 
         private void Button1_Click(object sender, EventArgs e)

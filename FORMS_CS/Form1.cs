@@ -14,7 +14,6 @@ namespace FORMS_CS
         void Forms(Form pr)
         {
             pr.TopLevel = false;
-            mainpanel.Controls.Clear();
             mainpanel.Controls.Add(pr);
             pr.BringToFront();
             pr.AutoSize = true;
@@ -31,6 +30,8 @@ namespace FORMS_CS
         {
             //تكبير وتصغير الفورم
             this.WindowState = (maxmin) ? FormWindowState.Normal : FormWindowState.Maximized;
+            this.Resize += Form1_Resize;
+
             maxmin = !maxmin;
         }
 

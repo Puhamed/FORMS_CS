@@ -200,7 +200,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(250, 19);
+            this.label10.Location = new System.Drawing.Point(281, 19);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 26);
             this.label10.TabIndex = 30;
@@ -210,7 +210,7 @@
             // 
             this.Datebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Datebox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Datebox.Location = new System.Drawing.Point(84, 29);
+            this.Datebox.Location = new System.Drawing.Point(169, 23);
             this.Datebox.Name = "Datebox";
             this.Datebox.Size = new System.Drawing.Size(106, 20);
             this.Datebox.TabIndex = 29;

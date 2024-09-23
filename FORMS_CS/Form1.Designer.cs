@@ -35,8 +35,6 @@
             this.Button2 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.current = new System.Windows.Forms.TextBox();
             this.Button8 = new System.Windows.Forms.Button();
@@ -51,6 +49,7 @@
             // 
             // mainpanel
             // 
+            this.mainpanel.BackColor = System.Drawing.Color.White;
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Location = new System.Drawing.Point(0, 65);
             this.mainpanel.Name = "mainpanel";
@@ -74,10 +73,10 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.Label2.Location = new System.Drawing.Point(1151, 0);
+            this.Label2.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Location = new System.Drawing.Point(1145, 0);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(99, 16);
+            this.Label2.Size = new System.Drawing.Size(105, 26);
             this.Label2.TabIndex = 7;
             this.Label2.Text = "منظومة المبيعات";
             // 
@@ -130,8 +129,6 @@
             // Panel2
             // 
             this.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(84)))), ((int)(((byte)(138)))));
-            this.Panel2.Controls.Add(this.button10);
-            this.Panel2.Controls.Add(this.button9);
             this.Panel2.Controls.Add(this.Label1);
             this.Panel2.Controls.Add(this.current);
             this.Panel2.Controls.Add(this.Button8);
@@ -145,57 +142,23 @@
             this.Panel2.Size = new System.Drawing.Size(1250, 37);
             this.Panel2.TabIndex = 5;
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.White;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Image = global::FORMS_CS.Properties.Resources.salesscreen;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(270, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(140, 37);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "المستخدمين";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Image = global::FORMS_CS.Properties.Resources.salesscreen;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(410, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(140, 37);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "اضافة فاتورة";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label1.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.White;
             this.Label1.Location = new System.Drawing.Point(230, 4);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(27, 16);
+            this.Label1.Size = new System.Drawing.Size(35, 26);
             this.Label1.TabIndex = 6;
             this.Label1.Text = "اسم";
             // 
             // current
             // 
-            this.current.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.current.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.current.Location = new System.Drawing.Point(12, 3);
             this.current.Name = "current";
-            this.current.Size = new System.Drawing.Size(212, 22);
+            this.current.Size = new System.Drawing.Size(212, 34);
             this.current.TabIndex = 5;
             // 
             // Button8
@@ -203,7 +166,7 @@
             this.Button8.BackColor = System.Drawing.Color.White;
             this.Button8.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button8.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button8.Image = global::FORMS_CS.Properties.Resources.salesscreen;
             this.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button8.Location = new System.Drawing.Point(550, 0);
@@ -220,7 +183,7 @@
             this.Button7.BackColor = System.Drawing.Color.White;
             this.Button7.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button7.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button7.Image = global::FORMS_CS.Properties.Resources.settings;
             this.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button7.Location = new System.Drawing.Point(690, 0);
@@ -237,7 +200,7 @@
             this.Button6.BackColor = System.Drawing.Color.White;
             this.Button6.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button6.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button6.Image = global::FORMS_CS.Properties.Resources.storage;
             this.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button6.Location = new System.Drawing.Point(830, 0);
@@ -254,7 +217,7 @@
             this.Button5.BackColor = System.Drawing.Color.White;
             this.Button5.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button5.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button5.Image = global::FORMS_CS.Properties.Resources.sales;
             this.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button5.Location = new System.Drawing.Point(970, 0);
@@ -270,7 +233,7 @@
             this.Button4.BackColor = System.Drawing.Color.White;
             this.Button4.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button4.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button4.Image = global::FORMS_CS.Properties.Resources.MAIN;
             this.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button4.Location = new System.Drawing.Point(1110, 0);
@@ -332,8 +295,6 @@
         internal System.Windows.Forms.Button Button5;
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.Panel Panel4;
-        internal System.Windows.Forms.Button button9;
-        internal System.Windows.Forms.Button button10;
     }
 }
 

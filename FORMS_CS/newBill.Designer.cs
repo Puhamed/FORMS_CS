@@ -43,12 +43,24 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dvg = new System.Windows.Forms.DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Senf_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SenfName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sell_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.Bellbox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,6 +68,8 @@
             this.Prizesbox = new System.Windows.Forms.TextBox();
             this.Namebox = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Button4 = new System.Windows.Forms.Button();
             this.PricebBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,20 +80,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.totalBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Button4 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Senf_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SenfName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sell_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -244,8 +244,8 @@
             this.buy,
             this.quantity,
             this.Sell_price,
-            this.total,
             this.type,
+            this.total,
             this.Delete});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -278,6 +278,63 @@
             this.dvg.Size = new System.Drawing.Size(1322, 341);
             this.dvg.TabIndex = 18;
             this.dvg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_CellClick);
+            // 
+            // No
+            // 
+            this.No.FillWeight = 50F;
+            this.No.HeaderText = "ت.ر";
+            this.No.Name = "No";
+            // 
+            // Senf_Code
+            // 
+            this.Senf_Code.HeaderText = "رقم الصنف";
+            this.Senf_Code.Name = "Senf_Code";
+            // 
+            // SenfName
+            // 
+            this.SenfName.HeaderText = "اسم الصنف";
+            this.SenfName.Name = "SenfName";
+            // 
+            // date
+            // 
+            this.date.HeaderText = "تاريخ الصلاحية";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            // 
+            // buy
+            // 
+            this.buy.HeaderText = "سعر الشراء";
+            this.buy.Name = "buy";
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "الكمية";
+            this.quantity.Name = "quantity";
+            // 
+            // Sell_price
+            // 
+            this.Sell_price.HeaderText = "سعر البيع";
+            this.Sell_price.Name = "Sell_price";
+            // 
+            // type
+            // 
+            this.type.HeaderText = "الفئة";
+            this.type.Name = "type";
+            // 
+            // total
+            // 
+            this.total.HeaderText = "الاجمالي";
+            this.total.Name = "total";
+            // 
+            // Delete
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "";
+            this.Delete.Name = "Delete";
             // 
             // panel2
             // 
@@ -367,6 +424,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "إضافة صنف";
             // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(934, 19);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 26);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "الفئة";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(846, 49);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(123, 34);
+            this.comboBox2.TabIndex = 12;
+            // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -438,6 +517,45 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(178, 61);
             this.panel7.TabIndex = 22;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Maroon;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::FORMS_CS.Properties.Resources.delete;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 61);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "حذف";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // Button4
+            // 
+            this.Button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(45)))), ((int)(((byte)(73)))));
+            this.Button4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Button4.FlatAppearance.BorderSize = 0;
+            this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button4.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Button4.ForeColor = System.Drawing.Color.White;
+            this.Button4.Image = global::FORMS_CS.Properties.Resources.add_1_icon__flatastic_1_iconset__custom_icon_design_0;
+            this.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button4.Location = new System.Drawing.Point(81, 0);
+            this.Button4.Margin = new System.Windows.Forms.Padding(5);
+            this.Button4.Name = "Button4";
+            this.Button4.Size = new System.Drawing.Size(97, 61);
+            this.Button4.TabIndex = 10;
+            this.Button4.Text = "إضافة";
+            this.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button4.UseVisualStyleBackColor = false;
+            this.Button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // PricebBox
             // 
@@ -553,124 +671,6 @@
             this.label11.Text = "label11";
             this.label11.Visible = false;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Maroon;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::FORMS_CS.Properties.Resources.delete;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 61);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "حذف";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // Button4
-            // 
-            this.Button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(45)))), ((int)(((byte)(73)))));
-            this.Button4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Button4.FlatAppearance.BorderSize = 0;
-            this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.Button4.ForeColor = System.Drawing.Color.White;
-            this.Button4.Image = global::FORMS_CS.Properties.Resources.add_1_icon__flatastic_1_iconset__custom_icon_design_0;
-            this.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button4.Location = new System.Drawing.Point(81, 0);
-            this.Button4.Margin = new System.Windows.Forms.Padding(5);
-            this.Button4.Name = "Button4";
-            this.Button4.Size = new System.Drawing.Size(97, 61);
-            this.Button4.TabIndex = 10;
-            this.Button4.Text = "إضافة";
-            this.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button4.UseVisualStyleBackColor = false;
-            this.Button4.Click += new System.EventHandler(this.Button4_Click);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(846, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(123, 34);
-            this.comboBox2.TabIndex = 12;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(934, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 26);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "الفئة";
-            // 
-            // No
-            // 
-            this.No.FillWeight = 50F;
-            this.No.HeaderText = "ت.ر";
-            this.No.Name = "No";
-            // 
-            // Senf_Code
-            // 
-            this.Senf_Code.HeaderText = "رقم الصنف";
-            this.Senf_Code.Name = "Senf_Code";
-            // 
-            // SenfName
-            // 
-            this.SenfName.HeaderText = "اسم الصنف";
-            this.SenfName.Name = "SenfName";
-            // 
-            // date
-            // 
-            this.date.HeaderText = "تاريخ الصلاحية";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            // 
-            // buy
-            // 
-            this.buy.HeaderText = "سعر الشراء";
-            this.buy.Name = "buy";
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "الكمية";
-            this.quantity.Name = "quantity";
-            // 
-            // Sell_price
-            // 
-            this.Sell_price.HeaderText = "سعر البيع";
-            this.Sell_price.Name = "Sell_price";
-            // 
-            // total
-            // 
-            this.total.HeaderText = "الاجمالي";
-            this.total.Name = "total";
-            // 
-            // type
-            // 
-            this.type.HeaderText = "الفئة";
-            this.type.Name = "type";
-            // 
-            // Delete
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "";
-            this.Delete.Name = "Delete";
-            // 
             // newBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -753,8 +753,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn buy;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sell_price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

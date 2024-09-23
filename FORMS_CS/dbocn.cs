@@ -39,15 +39,23 @@ namespace FORMS_CS
         public DataTable Fill_users()
         { 
         DataTable dt = new DataTable();
-            sa=new SqlDataAdapter("select u.user_id ,u.user_name,u.user_pass , l.level_name from users u join levels l on u.user_level = l.level_id ",con);
+            sa=new SqlDataAdapter("select u.user_id as [رقم الموظف],u.user_name as [اسم الموظف],u.user_pass as [كلمة مرور الموظف], l.level_name as [الصفة] from users u join levels l on u.user_level = l.level_id ",con);
             sa.Fill(dt);
         return dt;
         }
         public DataTable Fillsenfs()
         {
             DataTable dt = new DataTable();
-           disconnect();
-             sa = new SqlDataAdapter("select item_name as[الأصناف] from items", con);
+            disconnect();
+            sa = new SqlDataAdapter("select item_name as[الأصناف] from items", con);
+            sa.Fill(dt);
+            return dt;
+        }
+        public DataTable Fillsenfs(string id)
+        {
+            DataTable dt = new DataTable();
+            disconnect();
+            sa = new SqlDataAdapter("select item_name as[الأصناف] from items where item_kind = N'"+ id +"'", con);
             sa.Fill(dt);
             return dt;
         }
@@ -64,12 +72,13 @@ namespace FORMS_CS
         {
             DataTable dt = new DataTable();
             disconnect();
-             sa = new SqlDataAdapter("select * from suppliers", con);
-                sa.Fill(dt);
+            sa = new SqlDataAdapter("select * from suppliers", con);
+            sa.Fill(dt);
             return dt;
         }
         public DataTable Chose_level() // لاختيار مستوي المستخدم
-        { DataTable dt= new DataTable();
+        { 
+            DataTable dt= new DataTable();
             sa = new SqlDataAdapter("select * from levels", con);
             sa.Fill(dt);
             return dt;
@@ -102,7 +111,7 @@ namespace FORMS_CS
         {
             DataTable dt = new DataTable();
             disconnect();
-             sa = new SqlDataAdapter("select * from invoice_sell where invo_id = '"+ _name + "' ", con);
+            sa = new SqlDataAdapter("select * from invoice_sell where invo_id = '"+ _name + "' ", con);
             sa.Fill(dt);
             return dt;
         }
@@ -115,7 +124,7 @@ namespace FORMS_CS
         }*/
         public DataTable Fill_hes(int user)
         { 
-        DataTable dt=new DataTable();
+            DataTable dt=new DataTable();
             sa = new SqlDataAdapter("SELECT h.hes_id, u.user_name, k.kind_name, h.hes_date FROM hestory h JOIN kind_hes k ON h.hes_kind = k.kind_id JOIN users u ON h.hes_actor = u.user_id WHERE h.hes_actor =@id ", con);
             sa.SelectCommand.Parameters.AddWithValue("@id", user);
             sa.Fill(dt);
@@ -123,7 +132,7 @@ namespace FORMS_CS
         }
         public DataTable Data_tem(string num)//جدول يتم تخزين الاصناف فيه بشكل مؤقت يستعمل في فورم البيع فقط  
         {
-        DataTable dt =new DataTable();
+            DataTable dt =new DataTable();
             string str = "select * from items where item_id = @num";
             sa=new SqlDataAdapter(str,con) ;
             sa.SelectCommand.Parameters.AddWithValue("@num", num);
@@ -155,7 +164,7 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt;
         }
-        public void add_newItems(string id, string it_name , string it_price ,string it_exdate, string it_quant,string sup, string total,string code, string buyprice )
+        public void add_newItems(string id, string it_name , string it_price ,string it_exdate, string it_quant,string sup, string total,string code, string buyprice, string cat )
         {
             disconnect();
             string command = "INSERT INTO invoice_det (invo_id,item_name,item_prize,item_date,item_countity,item_code,item_buy)VALUES('"+ id + "', N'"+ it_name + "','"+ it_price + "', '"+ it_exdate + "','"+ it_quant + "','"+ code +"','"+ buyprice + "')";
@@ -164,7 +173,7 @@ namespace FORMS_CS
             string command2 = "INSERT INTO invoice ([invo_id],[invo_date],[invo_sup],[invo_total])VALUES('"+ id +"', '" + DateTime.Now.ToString("yyyy-MM-dd") + "',N'" + sup + "', '" + total + "')";
             SqlCommand cmd2 = new SqlCommand(command2, connect());
             disconnect();
-            string command3 = "insert into items(invo_id, item_id, item_name, item_date, item_countity, item_prizes, item_prizeb) SELECT[invo_id],[item_code],[item_name],[item_date],[item_countity],[item_prize],[item_buy] FROM invoice_det where item_code = '"+ code + "' and invo_id ='"+ id +"'";
+            string command3 = "insert into items(invo_id, item_id, item_name, item_date, item_countity, item_prizes, item_prizeb,item_kind ) SELECT[invo_id],[item_code],[item_name],[item_date],[item_countity],[item_prize],[item_buy] FROM invoice_det where item_code = '" + code + "' and invo_id ='"+ id +"','"+ cat +"'";
             SqlCommand cmd3 = new SqlCommand(command3, connect());
             cmd2.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
@@ -203,6 +212,7 @@ namespace FORMS_CS
             sa.Fill(dt);
             return dt;
         }
+
         public void login(string date, string n)
         {
             disconnect();

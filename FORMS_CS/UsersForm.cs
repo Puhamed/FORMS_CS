@@ -34,6 +34,11 @@ namespace FORMS_CS
             dt = new DataTable();
             dt = con.Fill_users();
             dataGridView1.DataSource = dt;
+            DataGridViewColumn column = new DataGridViewColumn();
+            column.HeaderText = "";
+            column.ValueType = typeof(Button);
+           
+            
         }
         //كود تعبئة الTextBoxes من أجل التعديل
 /*if (rowselect == -1)
@@ -75,5 +80,10 @@ private void dataGridView1_CellContentClick(object sender, DataGridViewCellEvent
 {
 
 }
-}
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

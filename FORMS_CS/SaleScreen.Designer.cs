@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel6 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -44,10 +43,6 @@
             this.chose2 = new System.Windows.Forms.LinkLabel();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Panel8 = new System.Windows.Forms.Panel();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.TextBox3 = new System.Windows.Forms.TextBox();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.totalp = new System.Windows.Forms.TextBox();
             this.Panel7 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -59,9 +54,15 @@
             this.Panel4 = new System.Windows.Forms.Panel();
             this.senfsgridview = new System.Windows.Forms.DataGridView();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.chose1 = new System.Windows.Forms.LinkLabel();
             this.last1 = new System.Windows.Forms.LinkLabel();
             this.dvg = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Panel5 = new System.Windows.Forms.Panel();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
@@ -83,13 +84,10 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.Panel12 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.totalp = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.Panel6.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.Panel8.SuspendLayout();
@@ -109,6 +107,8 @@
             this.Panel14.SuspendLayout();
             this.Panel13.SuspendLayout();
             this.Panel12.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel6
@@ -187,6 +187,7 @@
             this.Button8.Text = "حذف الفاتورة";
             this.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Button8.UseVisualStyleBackColor = true;
+            this.Button8.Click += new System.EventHandler(this.Button8_Click);
             // 
             // Button7
             // 
@@ -225,66 +226,22 @@
             this.Panel1.Controls.Add(this.Panel8);
             this.Panel1.Controls.Add(this.Panel7);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Panel1.Location = new System.Drawing.Point(0, 531);
+            this.Panel1.Location = new System.Drawing.Point(0, 530);
             this.Panel1.Margin = new System.Windows.Forms.Padding(5);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1213, 63);
+            this.Panel1.Size = new System.Drawing.Size(1213, 78);
             this.Panel1.TabIndex = 5;
             // 
             // Panel8
             // 
-            this.Panel8.Controls.Add(this.Label2);
-            this.Panel8.Controls.Add(this.TextBox3);
-            this.Panel8.Controls.Add(this.Label1);
-            this.Panel8.Controls.Add(this.totalp);
+            this.Panel8.Controls.Add(this.groupBox4);
+            this.Panel8.Controls.Add(this.groupBox3);
             this.Panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel8.Location = new System.Drawing.Point(0, 0);
             this.Panel8.Margin = new System.Windows.Forms.Padding(5);
             this.Panel8.Name = "Panel8";
-            this.Panel8.Size = new System.Drawing.Size(732, 61);
+            this.Panel8.Size = new System.Drawing.Size(732, 76);
             this.Panel8.TabIndex = 1;
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Label2.ForeColor = System.Drawing.Color.Black;
-            this.Label2.Location = new System.Drawing.Point(354, 18);
-            this.Label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(42, 17);
-            this.Label2.TabIndex = 11;
-            this.Label2.Text = "المدفوع";
-            // 
-            // TextBox3
-            // 
-            this.TextBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.TextBox3.Location = new System.Drawing.Point(246, 20);
-            this.TextBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(104, 26);
-            this.TextBox3.TabIndex = 10;
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Label1.ForeColor = System.Drawing.Color.Black;
-            this.Label1.Location = new System.Drawing.Point(160, 18);
-            this.Label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(46, 17);
-            this.Label1.TabIndex = 9;
-            this.Label1.Text = "الإجمالي";
-            // 
-            // totalp
-            // 
-            this.totalp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.totalp.Location = new System.Drawing.Point(13, 20);
-            this.totalp.Margin = new System.Windows.Forms.Padding(5);
-            this.totalp.Name = "totalp";
-            this.totalp.Size = new System.Drawing.Size(146, 26);
-            this.totalp.TabIndex = 8;
             // 
             // Panel7
             // 
@@ -293,7 +250,7 @@
             this.Panel7.Location = new System.Drawing.Point(732, 0);
             this.Panel7.Margin = new System.Windows.Forms.Padding(5);
             this.Panel7.Name = "Panel7";
-            this.Panel7.Size = new System.Drawing.Size(479, 61);
+            this.Panel7.Size = new System.Drawing.Size(479, 76);
             this.Panel7.TabIndex = 0;
             // 
             // groupBox2
@@ -304,7 +261,7 @@
             this.groupBox2.Location = new System.Drawing.Point(324, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(155, 61);
+            this.groupBox2.Size = new System.Drawing.Size(155, 76);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "فاتورة";
@@ -312,11 +269,11 @@
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.textBox4.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(3, 33);
             this.textBox4.Margin = new System.Windows.Forms.Padding(5);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 24);
+            this.textBox4.Size = new System.Drawing.Size(149, 34);
             this.textBox4.TabIndex = 20;
             // 
             // Panel2
@@ -332,7 +289,7 @@
             this.Panel2.Margin = new System.Windows.Forms.Padding(5);
             this.Panel2.Name = "Panel2";
             this.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Panel2.Size = new System.Drawing.Size(348, 531);
+            this.Panel2.Size = new System.Drawing.Size(348, 530);
             this.Panel2.TabIndex = 6;
             // 
             // TextBox10
@@ -385,7 +342,7 @@
             this.Panel4.Location = new System.Drawing.Point(166, 0);
             this.Panel4.Margin = new System.Windows.Forms.Padding(5);
             this.Panel4.Name = "Panel4";
-            this.Panel4.Size = new System.Drawing.Size(182, 531);
+            this.Panel4.Size = new System.Drawing.Size(182, 530);
             this.Panel4.TabIndex = 6;
             // 
             // senfsgridview
@@ -399,24 +356,24 @@
             this.senfsgridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.senfsgridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.senfsgridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(45)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.senfsgridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(45)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.senfsgridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.senfsgridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.senfsgridview.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.senfsgridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.senfsgridview.DefaultCellStyle = dataGridViewCellStyle8;
             this.senfsgridview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.senfsgridview.EnableHeadersVisualStyles = false;
             this.senfsgridview.Location = new System.Drawing.Point(0, 59);
@@ -426,21 +383,23 @@
             this.senfsgridview.ReadOnly = true;
             this.senfsgridview.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.senfsgridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.senfsgridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.senfsgridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.senfsgridview.RowHeadersVisible = false;
             this.senfsgridview.ShowCellErrors = false;
             this.senfsgridview.ShowCellToolTips = false;
             this.senfsgridview.ShowEditingIcon = false;
             this.senfsgridview.ShowRowErrors = false;
-            this.senfsgridview.Size = new System.Drawing.Size(182, 472);
+            this.senfsgridview.Size = new System.Drawing.Size(182, 471);
             this.senfsgridview.TabIndex = 10;
+            this.senfsgridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.senfsgridview_CellClick_1);
+            this.senfsgridview.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.senfsgridview_CellDoubleClick);
             // 
             // textBox2
             // 
@@ -450,6 +409,18 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(182, 26);
             this.textBox2.TabIndex = 0;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Omar", 9F, System.Drawing.FontStyle.Bold);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(0, 0);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(182, 33);
+            this.comboBox3.TabIndex = 19;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // chose1
             // 
@@ -485,14 +456,14 @@
             this.dvg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dvg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dvg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -500,14 +471,14 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Omar", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvg.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Omar", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvg.DefaultCellStyle = dataGridViewCellStyle11;
             this.dvg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvg.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dvg.Location = new System.Drawing.Point(0, 230);
@@ -516,14 +487,14 @@
             this.dvg.Name = "dvg";
             this.dvg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dvg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dvg.RowHeadersVisible = false;
             this.dvg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dvg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -531,9 +502,33 @@
             this.dvg.ShowCellToolTips = false;
             this.dvg.ShowEditingIcon = false;
             this.dvg.ShowRowErrors = false;
-            this.dvg.Size = new System.Drawing.Size(865, 301);
+            this.dvg.Size = new System.Drawing.Size(865, 300);
             this.dvg.TabIndex = 2;
-            this.dvg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "كود الصنف";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "اسم الصنف";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "سعر الوحدة";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "الكمية";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "الإجمالي";
+            this.Column5.Name = "Column5";
             // 
             // Panel3
             // 
@@ -542,7 +537,7 @@
             this.Panel3.Location = new System.Drawing.Point(0, 0);
             this.Panel3.Margin = new System.Windows.Forms.Padding(5);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(865, 531);
+            this.Panel3.Size = new System.Drawing.Size(865, 530);
             this.Panel3.TabIndex = 4;
             // 
             // Panel5
@@ -554,7 +549,7 @@
             this.Panel5.Location = new System.Drawing.Point(0, 0);
             this.Panel5.Margin = new System.Windows.Forms.Padding(5);
             this.Panel5.Name = "Panel5";
-            this.Panel5.Size = new System.Drawing.Size(865, 531);
+            this.Panel5.Size = new System.Drawing.Size(865, 530);
             this.Panel5.TabIndex = 1;
             // 
             // GroupBox1
@@ -776,51 +771,57 @@
             this.Panel12.Size = new System.Drawing.Size(98, 157);
             this.Panel12.TabIndex = 11;
             // 
-            // contextMenuStrip1
+            // groupBox3
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.groupBox3.Controls.Add(this.totalp);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox3.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox3.Size = new System.Drawing.Size(155, 76);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "الإجمالي";
             // 
-            // comboBox3
+            // totalp
             // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox3.Font = new System.Drawing.Font("Omar", 9F, System.Drawing.FontStyle.Bold);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(0, 0);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(182, 33);
-            this.comboBox3.TabIndex = 19;
+            this.totalp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.totalp.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalp.Location = new System.Drawing.Point(3, 33);
+            this.totalp.Margin = new System.Windows.Forms.Padding(5);
+            this.totalp.Name = "totalp";
+            this.totalp.Size = new System.Drawing.Size(149, 34);
+            this.totalp.TabIndex = 20;
             // 
-            // Column5
+            // groupBox4
             // 
-            this.Column5.HeaderText = "الإجمالي";
-            this.Column5.Name = "Column5";
+            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox4.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.groupBox4.Location = new System.Drawing.Point(155, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox4.Size = new System.Drawing.Size(155, 76);
+            this.groupBox4.TabIndex = 13;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "المدفوع";
             // 
-            // Column4
+            // textBox3
             // 
-            this.Column4.HeaderText = "الكمية";
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "سعر الوحدة";
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "اسم الصنف";
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "كود الصنف";
-            this.Column1.Name = "Column1";
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox3.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(3, 33);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(149, 34);
+            this.textBox3.TabIndex = 20;
             // 
             // SaleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 594);
+            this.ClientSize = new System.Drawing.Size(1213, 608);
             this.Controls.Add(this.Panel3);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel1);
@@ -828,12 +829,10 @@
             this.Name = "SaleScreen";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "SaleScreen";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SaleScreen_Load);
             this.Panel6.ResumeLayout(false);
             this.Panel1.ResumeLayout(false);
             this.Panel8.ResumeLayout(false);
-            this.Panel8.PerformLayout();
             this.Panel7.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -858,6 +857,10 @@
             this.Panel13.PerformLayout();
             this.Panel12.ResumeLayout(false);
             this.Panel12.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -871,10 +874,6 @@
         internal System.Windows.Forms.LinkLabel chose2;
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Panel Panel8;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.TextBox TextBox3;
-        internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.TextBox totalp;
         internal System.Windows.Forms.Panel Panel7;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Panel Panel9;
@@ -908,7 +907,6 @@
         internal System.Windows.Forms.TextBox TextBox10;
         internal System.Windows.Forms.DataGridView senfsgridview;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.GroupBox groupBox2;
         internal System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel15;
@@ -919,5 +917,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        internal System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        internal System.Windows.Forms.TextBox totalp;
     }
 }

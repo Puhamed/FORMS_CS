@@ -9,12 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 // الصفحه تحتاج الي تعديل في اضافة الكمية لو كنت حفيظ متحطش خشمك ف الموضوع توا نعدلها نا 
 
 namespace FORMS_CS
 {
     public partial class SaleScreen : Form
     {
+        string sel;
         readonly dbcon con = new dbcon();
         int i = 2;// متغير مساعد ل تحديد عدد العناصر المكرره يستخدم في دالة chose
         string valued;//متغير مساعد ل حفظ قيمة التاريخ في حالة تكرار العناصر
@@ -71,42 +73,79 @@ namespace FORMS_CS
 
             last1.LinkColor = i == 2 ? System.Drawing.Color.Gray : System.Drawing.Color.Blue;
         }
-        public void Addtogrid()//اضافة العنصر الي الداتا جريد فيو
+        public void Addtogrid(string id)//اضافة العنصر الي الداتا جريد فيو
         {
              date_co = Convert.ToDateTime(valued);
-     
-                foreach (DataRow row in dt.Rows)
+                bool found = false;
+            dt = con.Data_tem(id);
+            if (dvg.Rows.Count > 0)
+            {
+                try
                 {
-                    if (Convert.ToDateTime(row["item_date"]) == date_co && Convert.ToDouble(row["item_prizes"]) == valuep)
+                    foreach (DataGridViewRow row in dvg.Rows)
                     {
-
-                        foreach (DataGridViewRow row1 in dvg.Rows)
+                        if (row.Cells[0].Value.ToString() == id)
                         {
-                            if (dvg.Rows.Count == 0)
-                                break;
-                            if ((row1.Cells[0]).Value.Equals(row["item_id"]) && row1.Cells[2].Value.Equals(row["item_prizes"]) && Convert.ToDateTime(row["item_date"]) == dates[row1.Index])
-                            {
-                            if (quantbox.Value == 1)
-                            {
-                                dvg.Rows[row1.Index].Cells[3].Value = Convert.ToInt32(dvg.Rows[row1.Index].Cells[3].Value) + 1;
-                            }
-                            else
-                            {
-                                dvg.Rows[row1.Index].Cells[3].Value = Convert.ToInt32(dvg.Rows[row1.Index].Cells[3].Value) + quantbox.Value;
-                            }
-                            dvg.Rows[row1.Index].Cells[4].Value = Convert.ToInt32(dvg.Rows[row1.Index].Cells[3].Value) * Convert.ToInt32(dvg.Rows[row1.Index].Cells[2].Value);
-                            totalp.Text= Convert.ToInt32( dvg.Rows[row1.Index].Cells[4].Value) + totalp.Text;
-                            dvg.Refresh();
-                                return;
-                            }
+                            dvg.AllowUserToAddRows = false;
+                            row.Cells[3].Value = Convert.ToUInt16(row.Cells[3].Value) + quantbox.Value;
+                            found = true;
                         }
-                    Addoneitem(row);
-                    break;
+
+                    }
+                    if (!found)
+                    {
+                        Addoneitem(dt.Rows[0]);
                     }
                 }
-            
+                catch
+                {
+                    return;
+                }
 
-            dvg.Refresh();
+            }
+            else
+            {
+                Addoneitem(dt.Rows[0]);
+            }
+            quantbox.Value = 1;
+            /* foreach (DataRow row in dt.Rows)
+             {
+                 if (Convert.ToDateTime(row["item_date"]) == date_co && Convert.ToDouble(row["item_prizes"]) == valuep)
+                 {
+
+                     foreach (DataGridViewRow row1 in dvg.Rows)
+                     {
+                     if (dvg.Rows.Count == 0)
+                     {
+                         Addoneitem(row);
+                     }
+                     else if ((row1.Cells[0]).Value.ToString() == (row["item_id"]).ToString() && row1.Cells[2].Value.ToString() == (row["item_prizes"]).ToString() && Convert.ToDateTime(row["item_date"]).ToString() == dates[row1.Index].ToString())
+                         {
+                         if (quantbox.Value == 1)
+                         {
+                             dvg.Rows[row1.Index].Cells[3].Value = Convert.ToInt32(dvg.Rows[row1.Index].Cells[3].Value) + 1;
+                         }
+                         else
+                         {
+                             dvg.Rows[row1.Index].Cells[3].Value = Convert.ToInt32(dvg.Rows[row1.Index].Cells[3].Value) + quantbox.Value;
+                         }
+                             dvg.Rows[row1.Index].Cells[4].Value = Convert.ToInt32(dvg.Rows[row1.Index].Cells[3].Value) * Convert.ToInt32(dvg.Rows[row1.Index].Cells[2].Value);
+                             totalp.Text= Convert.ToInt32( dvg.Rows[row1.Index].Cells[4].Value) + totalp.Text;
+                             dvg.Refresh();
+                             return;
+                         }
+                         else
+                         {
+                             Addoneitem(row);
+                         }
+                     }
+
+
+                 }
+             }
+
+
+         dvg.Refresh();*/
         }
         public void Maxinvo()//اضافة فاتورة جديده
         {
@@ -115,6 +154,8 @@ namespace FORMS_CS
         }
         private void Addoneitem(DataRow roww)//اضافة ليس متكرر
         {
+            //bool found = false;
+
             if (quantbox.Value == 1)
             {
                 dvg.Rows.Add(roww["item_id"], roww["item_name"], roww["item_prizes"], 1, roww["item_prizes"]);
@@ -132,9 +173,13 @@ namespace FORMS_CS
             senfsgridview.DataSource = con.Fillsenfs();
             ComboBox1.DataSource=  con.Fill_cos();
             ComboBox1.DisplayMember= "cus_name";
+            comboBox3.DataSource = con.getcat();
+            comboBox3.DisplayMember = "cat_Name";
+            comboBox3.ValueMember = "id";
         }
         private void TextBox10_KeyDown(object sender, KeyEventArgs e)
         {
+
             if (e.KeyCode == Keys.Enter)
             {
                 try
@@ -152,7 +197,7 @@ namespace FORMS_CS
                             Chose();
                         }
                         else
-                            Addoneitem(dt.Rows[0]);
+                            Addtogrid(TextBox10.Text);
 
                     }
                 }
@@ -187,24 +232,20 @@ namespace FORMS_CS
                 return;
             valued = date1.Text;
             valuep = Convert.ToDouble(prize1.Text);
-            Addtogrid();
+            //Addtogrid();
             Restchose();
         }
 
         private void chose2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (chose2.LinkColor == System.Drawing.Color.Gray)//لضمان عدم الرجوع الي خانه غير موجوده
-                return;
-             valued = date2.Text;
-             valuep = Convert.ToDouble(prize2.Text);
-            Addtogrid();
+            return;
+            valued = date2.Text;
+            valuep = Convert.ToDouble(prize2.Text);
+            //Addtogrid();
             Restchose();
         }
 
-        private void dvg_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -212,9 +253,9 @@ namespace FORMS_CS
 
         private void Button7_Click(object sender, EventArgs e)
         {
-         dvg.Rows.Clear();
+            dvg.Rows.Clear();
             dt.Rows.Clear();
-           dates.Clear();
+            dates.Clear();
             Restchose();
             dvg.Refresh();
             comboBox2.DataSource=null;
@@ -333,6 +374,44 @@ namespace FORMS_CS
         }
 
         private void TextBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            senfsgridview.DataSource = con.Fillsenfs(comboBox3.Text);
+
+        }
+
+        private void senfsgridview_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+      
+        }
+
+        private void senfsgridview_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                sel = con.getcode(senfsgridview.Rows[e.RowIndex].Cells[0].Value.ToString()).Rows[0][0].ToString();
+                Restchose();
+
+                quantbox.Value = 1;
+                dt = con.Data_tem(sel);
+                if (dt.Rows.Count > 1)// للتحقق من انه العنصر مخزن اكثر من مره
+                {
+                    Chose();
+                }
+                else
+                Addtogrid(sel);
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void Button8_Click(object sender, EventArgs e)
         {
 
         }
