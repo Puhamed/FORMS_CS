@@ -213,11 +213,11 @@
             // chose2
             // 
             this.chose2.AutoSize = true;
-            this.chose2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.chose2.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
             this.chose2.LinkColor = System.Drawing.Color.Gray;
             this.chose2.Location = new System.Drawing.Point(26, 81);
             this.chose2.Name = "chose2";
-            this.chose2.Size = new System.Drawing.Size(43, 16);
+            this.chose2.Size = new System.Drawing.Size(46, 31);
             this.chose2.TabIndex = 12;
             this.chose2.TabStop = true;
             this.chose2.Text = "اختيار";
@@ -402,13 +402,14 @@
             this.senfsgridview.AllowUserToResizeColumns = false;
             this.senfsgridview.AllowUserToResizeRows = false;
             this.senfsgridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.senfsgridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.senfsgridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(90)))), ((int)(((byte)(110)))));
             this.senfsgridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.senfsgridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.senfsgridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(45)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Khaki;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
@@ -418,7 +419,7 @@
             this.senfsgridview.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Omar", 11F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -475,11 +476,11 @@
             // chose1
             // 
             this.chose1.AutoSize = true;
-            this.chose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.chose1.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
             this.chose1.LinkColor = System.Drawing.Color.Gray;
             this.chose1.Location = new System.Drawing.Point(26, 44);
             this.chose1.Name = "chose1";
-            this.chose1.Size = new System.Drawing.Size(43, 16);
+            this.chose1.Size = new System.Drawing.Size(46, 31);
             this.chose1.TabIndex = 11;
             this.chose1.TabStop = true;
             this.chose1.Text = "اختيار";
@@ -488,11 +489,11 @@
             // last1
             // 
             this.last1.AutoSize = true;
-            this.last1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.last1.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
             this.last1.LinkColor = System.Drawing.Color.Gray;
             this.last1.Location = new System.Drawing.Point(30, 80);
             this.last1.Name = "last1";
-            this.last1.Size = new System.Drawing.Size(45, 16);
+            this.last1.Size = new System.Drawing.Size(46, 26);
             this.last1.TabIndex = 8;
             this.last1.TabStop = true;
             this.last1.Text = "السابق";
@@ -716,6 +717,7 @@
             this.Panel14.Controls.Add(this.date2);
             this.Panel14.Controls.Add(this.date1);
             this.Panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel14.Font = new System.Drawing.Font("Omar", 8.25F);
             this.Panel14.Location = new System.Drawing.Point(98, 44);
             this.Panel14.Name = "Panel14";
             this.Panel14.Size = new System.Drawing.Size(217, 113);
@@ -725,10 +727,10 @@
             // 
             this.count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.count.AutoSize = true;
-            this.count.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.count.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
             this.count.Location = new System.Drawing.Point(93, 80);
             this.count.Name = "count";
-            this.count.Size = new System.Drawing.Size(31, 16);
+            this.count.Size = new System.Drawing.Size(28, 26);
             this.count.TabIndex = 11;
             this.count.Text = "****";
             // 
@@ -736,10 +738,10 @@
             // 
             this.prize2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.prize2.AutoSize = true;
-            this.prize2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.prize2.Location = new System.Drawing.Point(144, 37);
+            this.prize2.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.prize2.Location = new System.Drawing.Point(144, 48);
             this.prize2.Name = "prize2";
-            this.prize2.Size = new System.Drawing.Size(31, 16);
+            this.prize2.Size = new System.Drawing.Size(28, 26);
             this.prize2.TabIndex = 7;
             this.prize2.Text = "****";
             // 
@@ -747,10 +749,10 @@
             // 
             this.prize1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.prize1.AutoSize = true;
-            this.prize1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.prize1.Location = new System.Drawing.Point(145, 8);
+            this.prize1.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.prize1.Location = new System.Drawing.Point(145, 12);
             this.prize1.Name = "prize1";
-            this.prize1.Size = new System.Drawing.Size(31, 16);
+            this.prize1.Size = new System.Drawing.Size(28, 26);
             this.prize1.TabIndex = 5;
             this.prize1.Text = "****";
             // 
@@ -759,11 +761,11 @@
             this.next1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.next1.AutoSize = true;
             this.next1.DisabledLinkColor = System.Drawing.Color.Gray;
-            this.next1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.next1.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
             this.next1.LinkColor = System.Drawing.Color.Gray;
             this.next1.Location = new System.Drawing.Point(140, 80);
             this.next1.Name = "next1";
-            this.next1.Size = new System.Drawing.Size(41, 16);
+            this.next1.Size = new System.Drawing.Size(40, 26);
             this.next1.TabIndex = 10;
             this.next1.TabStop = true;
             this.next1.Text = "التالي";
@@ -773,10 +775,10 @@
             // 
             this.date2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.date2.AutoSize = true;
-            this.date2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.date2.Location = new System.Drawing.Point(44, 37);
+            this.date2.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.date2.Location = new System.Drawing.Point(44, 47);
             this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(31, 16);
+            this.date2.Size = new System.Drawing.Size(28, 26);
             this.date2.TabIndex = 6;
             this.date2.Text = "****";
             // 
@@ -784,10 +786,10 @@
             // 
             this.date1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.date1.AutoSize = true;
-            this.date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.date1.Location = new System.Drawing.Point(44, 8);
+            this.date1.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.date1.Location = new System.Drawing.Point(44, 11);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(31, 16);
+            this.date1.Size = new System.Drawing.Size(28, 26);
             this.date1.TabIndex = 4;
             this.date1.Text = "****";
             // 
@@ -804,20 +806,20 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label6.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label6.Location = new System.Drawing.Point(140, 8);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(39, 16);
+            this.Label6.Size = new System.Drawing.Size(41, 26);
             this.Label6.TabIndex = 3;
             this.Label6.Text = "السعر";
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label5.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label5.Location = new System.Drawing.Point(20, 8);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(92, 16);
+            this.Label5.Size = new System.Drawing.Size(86, 26);
             this.Label5.TabIndex = 2;
             this.Label5.Text = "تاريخ الصلاحية";
             // 
