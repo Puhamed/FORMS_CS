@@ -47,7 +47,7 @@ namespace FORMS_CS
         {
             DataTable dt = new DataTable();
             disconnect();
-            sa = new SqlDataAdapter("select item_name as[الأصناف] from items", con);
+            sa = new SqlDataAdapter("select distinct item_name as[الأصناف] from items", con);
             sa.Fill(dt);
             return dt;
         }

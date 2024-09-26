@@ -145,9 +145,10 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
+            this.Label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.Label1.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.White;
-            this.Label1.Location = new System.Drawing.Point(230, 4);
+            this.Label1.Location = new System.Drawing.Point(212, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(35, 26);
             this.Label1.TabIndex = 6;
@@ -155,10 +156,12 @@
             // 
             // current
             // 
-            this.current.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.current.Location = new System.Drawing.Point(12, 3);
+            this.current.BackColor = System.Drawing.Color.Silver;
+            this.current.Dock = System.Windows.Forms.DockStyle.Left;
+            this.current.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.current.Location = new System.Drawing.Point(0, 0);
             this.current.Name = "current";
-            this.current.Size = new System.Drawing.Size(212, 34);
+            this.current.Size = new System.Drawing.Size(212, 37);
             this.current.TabIndex = 5;
             // 
             // Button8
@@ -279,7 +282,6 @@
         }
 
         #endregion
-
         internal System.Windows.Forms.Panel mainpanel;
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label2;

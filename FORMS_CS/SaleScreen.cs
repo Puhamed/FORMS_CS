@@ -27,6 +27,7 @@ namespace FORMS_CS
         string str;
         SqlCommand cmd;
         SqlDataAdapter da = new SqlDataAdapter();
+        string selc;
         public SaleScreen()
         {
 
@@ -78,6 +79,7 @@ namespace FORMS_CS
              date_co = Convert.ToDateTime(valued);
                 bool found = false;
             dt = con.Data_tem(id);
+            
             if (dvg.Rows.Count > 0)
             {
                 try
@@ -101,6 +103,7 @@ namespace FORMS_CS
                 {
                     return;
                 }
+                quantbox.Value = 1;
 
             }
             else
@@ -165,6 +168,7 @@ namespace FORMS_CS
             {
                 dvg.Rows.Add(roww["item_id"], roww["item_name"], roww["item_prizes"], quantbox.Value, Convert.ToInt32(roww["item_prizes"])*quantbox.Value);
                 dates.Add(date_co);
+                quantbox.Value = 1;
             }
 
         }
@@ -195,9 +199,11 @@ namespace FORMS_CS
                         if (dt.Rows.Count > 1)// للتحقق من انه العنصر مخزن اكثر من مره
                         {
                             Chose();
+                            selc = TextBox10.Text;
                         }
                         else
                             Addtogrid(TextBox10.Text);
+
 
                     }
                 }
@@ -226,13 +232,11 @@ namespace FORMS_CS
 
         private void chose1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-            
             if (chose1.LinkColor == System.Drawing.Color.Gray)//لضمان عدم الرجوع الي خانه غير موجوده
                 return;
             valued = date1.Text;
             valuep = Convert.ToDouble(prize1.Text);
-            //Addtogrid();
+            Addtogrid(selc);
             Restchose();
         }
 
@@ -242,7 +246,7 @@ namespace FORMS_CS
             return;
             valued = date2.Text;
             valuep = Convert.ToDouble(prize2.Text);
-            //Addtogrid();
+            Addtogrid(selc);
             Restchose();
         }
 
@@ -358,14 +362,18 @@ namespace FORMS_CS
 
         private void senfsgridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            quantbox.Value = 1;
+
+           /* quantbox.Value = 1;
             dt = con.Data_tem(senfsgridview.Rows[e.RowIndex].Cells[0].Value.ToString());
             if (dt.Rows.Count > 1)// للتحقق من انه العنصر مخزن اكثر من مره
             {
                 Chose();
             }
             else
+            {
                 Addoneitem(dt.Rows[0]);
+                selc = dt.Rows[0].ToString();
+            }*/
         }
 
         private void Panel11_Paint(object sender, PaintEventArgs e)
@@ -395,15 +403,17 @@ namespace FORMS_CS
             {
                 sel = con.getcode(senfsgridview.Rows[e.RowIndex].Cells[0].Value.ToString()).Rows[0][0].ToString();
                 Restchose();
-
-                quantbox.Value = 1;
                 dt = con.Data_tem(sel);
                 if (dt.Rows.Count > 1)// للتحقق من انه العنصر مخزن اكثر من مره
                 {
                     Chose();
+                    selc = sel;
                 }
                 else
-                Addtogrid(sel);
+                {
+                    Addtogrid(sel);
+                    
+                }
             }
             catch
             {
