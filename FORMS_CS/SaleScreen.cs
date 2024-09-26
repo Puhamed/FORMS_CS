@@ -45,7 +45,7 @@ namespace FORMS_CS
             prize2.Text = "****";
             count.Text = "****";
             TextBox10.Text = "";
-            quantbox.Value = 0;
+            
         }
         private void Chose()//في حالة كان هناك اكثر من عنصر بنفس الباركود
         {

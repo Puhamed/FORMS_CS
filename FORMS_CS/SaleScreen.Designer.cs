@@ -661,9 +661,19 @@
             this.quantbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.quantbox.Font = new System.Drawing.Font("Omar", 9F, System.Drawing.FontStyle.Bold);
             this.quantbox.Location = new System.Drawing.Point(319, 80);
+            this.quantbox.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.quantbox.Name = "quantbox";
             this.quantbox.Size = new System.Drawing.Size(113, 32);
             this.quantbox.TabIndex = 20;
+            this.quantbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // TextBox1
             // 
