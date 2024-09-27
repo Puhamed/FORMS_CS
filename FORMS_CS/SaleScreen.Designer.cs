@@ -144,7 +144,7 @@
             this.button9.Dock = System.Windows.Forms.DockStyle.Right;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(373, 0);
@@ -162,7 +162,7 @@
             this.Button12.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button12.FlatAppearance.BorderSize = 0;
             this.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button12.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.Button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.Button12.ForeColor = System.Drawing.Color.White;
             this.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button12.Location = new System.Drawing.Point(496, 0);
@@ -179,7 +179,7 @@
             this.Button8.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button8.FlatAppearance.BorderSize = 0;
             this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button8.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.Button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.Button8.ForeColor = System.Drawing.Color.White;
             this.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button8.Location = new System.Drawing.Point(619, 0);
@@ -197,7 +197,7 @@
             this.Button7.Dock = System.Windows.Forms.DockStyle.Right;
             this.Button7.FlatAppearance.BorderSize = 0;
             this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button7.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.Button7.ForeColor = System.Drawing.Color.White;
             this.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button7.Location = new System.Drawing.Point(742, 0);
@@ -213,11 +213,11 @@
             // chose2
             // 
             this.chose2.AutoSize = true;
-            this.chose2.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.chose2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.chose2.LinkColor = System.Drawing.Color.Gray;
             this.chose2.Location = new System.Drawing.Point(26, 81);
             this.chose2.Name = "chose2";
-            this.chose2.Size = new System.Drawing.Size(46, 31);
+            this.chose2.Size = new System.Drawing.Size(45, 18);
             this.chose2.TabIndex = 12;
             this.chose2.TabStop = true;
             this.chose2.Text = "اختيار";
@@ -251,7 +251,7 @@
             // 
             this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox4.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.groupBox4.Location = new System.Drawing.Point(155, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -263,18 +263,18 @@
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(3, 33);
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(3, 20);
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 34);
+            this.textBox3.Size = new System.Drawing.Size(149, 22);
             this.textBox3.TabIndex = 20;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.totalp);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox3.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -286,11 +286,11 @@
             // totalp
             // 
             this.totalp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.totalp.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalp.Location = new System.Drawing.Point(3, 33);
+            this.totalp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalp.Location = new System.Drawing.Point(3, 20);
             this.totalp.Margin = new System.Windows.Forms.Padding(5);
             this.totalp.Name = "totalp";
-            this.totalp.Size = new System.Drawing.Size(149, 34);
+            this.totalp.Size = new System.Drawing.Size(149, 22);
             this.totalp.TabIndex = 20;
             // 
             // Panel7
@@ -307,7 +307,7 @@
             // 
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(324, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -319,11 +319,11 @@
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(3, 33);
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(3, 20);
             this.textBox4.Margin = new System.Windows.Forms.Padding(5);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 34);
+            this.textBox4.Size = new System.Drawing.Size(149, 22);
             this.textBox4.TabIndex = 20;
             // 
             // Panel2
@@ -367,10 +367,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label7.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(85, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 31);
+            this.label7.Size = new System.Drawing.Size(81, 18);
             this.label7.TabIndex = 13;
             this.label7.Text = "رمز المنتج  ";
             // 
@@ -409,7 +409,7 @@
             this.senfsgridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(45)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Khaki;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
@@ -419,7 +419,7 @@
             this.senfsgridview.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Omar", 11F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -427,7 +427,7 @@
             this.senfsgridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.senfsgridview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.senfsgridview.EnableHeadersVisualStyles = false;
-            this.senfsgridview.Location = new System.Drawing.Point(0, 59);
+            this.senfsgridview.Location = new System.Drawing.Point(0, 49);
             this.senfsgridview.Margin = new System.Windows.Forms.Padding(5);
             this.senfsgridview.MultiSelect = false;
             this.senfsgridview.Name = "senfsgridview";
@@ -447,7 +447,7 @@
             this.senfsgridview.ShowCellToolTips = false;
             this.senfsgridview.ShowEditingIcon = false;
             this.senfsgridview.ShowRowErrors = false;
-            this.senfsgridview.Size = new System.Drawing.Size(182, 471);
+            this.senfsgridview.Size = new System.Drawing.Size(182, 481);
             this.senfsgridview.TabIndex = 10;
             this.senfsgridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.senfsgridview_CellClick);
             this.senfsgridview.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.senfsgridview_CellDoubleClick);
@@ -456,7 +456,7 @@
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(0, 33);
+            this.textBox2.Location = new System.Drawing.Point(0, 23);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(182, 26);
             this.textBox2.TabIndex = 0;
@@ -465,22 +465,22 @@
             // 
             this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Omar", 9F, System.Drawing.FontStyle.Bold);
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(0, 0);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(182, 33);
+            this.comboBox3.Size = new System.Drawing.Size(182, 23);
             this.comboBox3.TabIndex = 19;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // chose1
             // 
             this.chose1.AutoSize = true;
-            this.chose1.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.chose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.chose1.LinkColor = System.Drawing.Color.Gray;
             this.chose1.Location = new System.Drawing.Point(26, 44);
             this.chose1.Name = "chose1";
-            this.chose1.Size = new System.Drawing.Size(46, 31);
+            this.chose1.Size = new System.Drawing.Size(45, 18);
             this.chose1.TabIndex = 11;
             this.chose1.TabStop = true;
             this.chose1.Text = "اختيار";
@@ -489,11 +489,11 @@
             // last1
             // 
             this.last1.AutoSize = true;
-            this.last1.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.last1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.last1.LinkColor = System.Drawing.Color.Gray;
             this.last1.Location = new System.Drawing.Point(30, 80);
             this.last1.Name = "last1";
-            this.last1.Size = new System.Drawing.Size(46, 26);
+            this.last1.Size = new System.Drawing.Size(45, 16);
             this.last1.TabIndex = 8;
             this.last1.TabStop = true;
             this.last1.Text = "السابق";
@@ -509,7 +509,7 @@
             this.dvg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Omar", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Khaki;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
@@ -524,7 +524,7 @@
             this.Column5});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Omar", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -628,7 +628,7 @@
             this.Panel11.Controls.Add(this.TextBox1);
             this.Panel11.Controls.Add(this.ComboBox1);
             this.Panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel11.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.Panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.Panel11.Location = new System.Drawing.Point(320, 22);
             this.Panel11.Name = "Panel11";
             this.Panel11.Size = new System.Drawing.Size(540, 157);
@@ -639,10 +639,10 @@
             // 
             this.Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Omar", 11F, System.Drawing.FontStyle.Bold);
+            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.Label4.Location = new System.Drawing.Point(440, 22);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(81, 31);
+            this.Label4.Size = new System.Drawing.Size(72, 18);
             this.Label4.TabIndex = 16;
             this.Label4.Text = "اسم الزبون";
             // 
@@ -650,17 +650,17 @@
             // 
             this.Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label3.Location = new System.Drawing.Point(440, 82);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(49, 26);
+            this.Label3.Size = new System.Drawing.Size(42, 16);
             this.Label3.TabIndex = 17;
             this.Label3.Text = "الكمية";
             // 
             // quantbox
             // 
             this.quantbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.quantbox.Font = new System.Drawing.Font("Omar", 9F, System.Drawing.FontStyle.Bold);
+            this.quantbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.quantbox.Location = new System.Drawing.Point(319, 80);
             this.quantbox.Maximum = new decimal(new int[] {
             1000,
@@ -668,7 +668,7 @@
             0,
             0});
             this.quantbox.Name = "quantbox";
-            this.quantbox.Size = new System.Drawing.Size(113, 32);
+            this.quantbox.Size = new System.Drawing.Size(113, 21);
             this.quantbox.TabIndex = 20;
             this.quantbox.Value = new decimal(new int[] {
             1,
@@ -679,21 +679,21 @@
             // TextBox1
             // 
             this.TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBox1.Font = new System.Drawing.Font("Omar", 9F, System.Drawing.FontStyle.Bold);
+            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.TextBox1.Location = new System.Drawing.Point(120, 80);
             this.TextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(165, 32);
+            this.TextBox1.Size = new System.Drawing.Size(165, 21);
             this.TextBox1.TabIndex = 19;
             // 
             // ComboBox1
             // 
             this.ComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComboBox1.Font = new System.Drawing.Font("Omar", 9F, System.Drawing.FontStyle.Bold);
+            this.ComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.ComboBox1.FormattingEnabled = true;
             this.ComboBox1.Location = new System.Drawing.Point(254, 20);
             this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(178, 33);
+            this.ComboBox1.Size = new System.Drawing.Size(178, 23);
             this.ComboBox1.TabIndex = 18;
             // 
             // Panel10
@@ -717,7 +717,7 @@
             this.Panel14.Controls.Add(this.date2);
             this.Panel14.Controls.Add(this.date1);
             this.Panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel14.Font = new System.Drawing.Font("Omar", 8.25F);
+            this.Panel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Panel14.Location = new System.Drawing.Point(98, 44);
             this.Panel14.Name = "Panel14";
             this.Panel14.Size = new System.Drawing.Size(217, 113);
@@ -727,10 +727,10 @@
             // 
             this.count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.count.AutoSize = true;
-            this.count.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.count.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.count.Location = new System.Drawing.Point(93, 80);
             this.count.Name = "count";
-            this.count.Size = new System.Drawing.Size(28, 26);
+            this.count.Size = new System.Drawing.Size(31, 16);
             this.count.TabIndex = 11;
             this.count.Text = "****";
             // 
@@ -738,10 +738,10 @@
             // 
             this.prize2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.prize2.AutoSize = true;
-            this.prize2.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.prize2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.prize2.Location = new System.Drawing.Point(144, 48);
             this.prize2.Name = "prize2";
-            this.prize2.Size = new System.Drawing.Size(28, 26);
+            this.prize2.Size = new System.Drawing.Size(31, 16);
             this.prize2.TabIndex = 7;
             this.prize2.Text = "****";
             // 
@@ -749,10 +749,10 @@
             // 
             this.prize1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.prize1.AutoSize = true;
-            this.prize1.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.prize1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.prize1.Location = new System.Drawing.Point(145, 12);
             this.prize1.Name = "prize1";
-            this.prize1.Size = new System.Drawing.Size(28, 26);
+            this.prize1.Size = new System.Drawing.Size(31, 16);
             this.prize1.TabIndex = 5;
             this.prize1.Text = "****";
             // 
@@ -761,11 +761,11 @@
             this.next1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.next1.AutoSize = true;
             this.next1.DisabledLinkColor = System.Drawing.Color.Gray;
-            this.next1.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.next1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.next1.LinkColor = System.Drawing.Color.Gray;
             this.next1.Location = new System.Drawing.Point(140, 80);
             this.next1.Name = "next1";
-            this.next1.Size = new System.Drawing.Size(40, 26);
+            this.next1.Size = new System.Drawing.Size(41, 16);
             this.next1.TabIndex = 10;
             this.next1.TabStop = true;
             this.next1.Text = "التالي";
@@ -775,10 +775,10 @@
             // 
             this.date2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.date2.AutoSize = true;
-            this.date2.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.date2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.date2.Location = new System.Drawing.Point(44, 47);
             this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(28, 26);
+            this.date2.Size = new System.Drawing.Size(31, 16);
             this.date2.TabIndex = 6;
             this.date2.Text = "****";
             // 
@@ -786,10 +786,10 @@
             // 
             this.date1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.date1.AutoSize = true;
-            this.date1.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.date1.Location = new System.Drawing.Point(44, 11);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(28, 26);
+            this.date1.Size = new System.Drawing.Size(31, 16);
             this.date1.TabIndex = 4;
             this.date1.Text = "****";
             // 
@@ -806,20 +806,20 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label6.Location = new System.Drawing.Point(140, 8);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(41, 26);
+            this.Label6.Size = new System.Drawing.Size(39, 16);
             this.Label6.TabIndex = 3;
             this.Label6.Text = "السعر";
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Omar", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.Label5.Location = new System.Drawing.Point(20, 8);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(86, 26);
+            this.Label5.Size = new System.Drawing.Size(92, 16);
             this.Label5.TabIndex = 2;
             this.Label5.Text = "تاريخ الصلاحية";
             // 
